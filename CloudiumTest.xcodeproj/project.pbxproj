@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B30D26B6E51900B0C50A /* AppDelegate.swift */; };
 		8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B30F26B6E51900B0C50A /* SceneDelegate.swift */; };
-		8416B31226B6E51900B0C50A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31126B6E51900B0C50A /* ViewController.swift */; };
+		8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31126B6E51900B0C50A /* SecondViewController.swift */; };
 		8416B31526B6E51900B0C50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31326B6E51900B0C50A /* Main.storyboard */; };
 		8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */; };
 		8416B31A26B6E51A00B0C50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31926B6E51A00B0C50A /* Assets.xcassets */; };
 		8416B31D26B6E51A00B0C50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */; };
+		8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B33E26B6EAF400B0C50A /* TabBarController.swift */; };
+		8416B34526B6EB6000B0C50A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34226B6EB6000B0C50A /* Header.swift */; };
+		8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34426B6EB6000B0C50A /* SeatTypes.swift */; };
+		8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */; };
+		8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34B26B6EBA000B0C50A /* Coordinator.swift */; };
+		8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8416B30A26B6E51900B0C50A /* CloudiumTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudiumTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416B30D26B6E51900B0C50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8416B30F26B6E51900B0C50A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8416B31126B6E51900B0C50A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8416B31126B6E51900B0C50A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8416B31426B6E51900B0C50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8416B31726B6E51900B0C50A /* CloudiumTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CloudiumTest.xcdatamodel; sourceTree = "<group>"; };
 		8416B31926B6E51A00B0C50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8416B31C26B6E51A00B0C50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8416B31E26B6E51A00B0C50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8416B33E26B6EAF400B0C50A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8416B34226B6EB6000B0C50A /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		8416B34426B6EB6000B0C50A /* SeatTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatTypes.swift; sourceTree = "<group>"; };
+		8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8416B34B26B6EBA000B0C50A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +70,12 @@
 		8416B30C26B6E51900B0C50A /* CloudiumTest */ = {
 			isa = PBXGroup;
 			children = (
+				8416B34326B6EB6000B0C50A /* Seats */,
+				8416B34126B6EB6000B0C50A /* Views */,
 				8416B30D26B6E51900B0C50A /* AppDelegate.swift */,
 				8416B30F26B6E51900B0C50A /* SceneDelegate.swift */,
-				8416B31126B6E51900B0C50A /* ViewController.swift */,
+				8416B31126B6E51900B0C50A /* SecondViewController.swift */,
+				8416B33E26B6EAF400B0C50A /* TabBarController.swift */,
 				8416B31326B6E51900B0C50A /* Main.storyboard */,
 				8416B31926B6E51A00B0C50A /* Assets.xcassets */,
 				8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */,
@@ -68,6 +83,49 @@
 				8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */,
 			);
 			path = CloudiumTest;
+			sourceTree = "<group>";
+		};
+		8416B34126B6EB6000B0C50A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34826B6EBA000B0C50A /* Helper */,
+				8416B34226B6EB6000B0C50A /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8416B34326B6EB6000B0C50A /* Seats */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34426B6EB6000B0C50A /* SeatTypes.swift */,
+			);
+			path = Seats;
+			sourceTree = "<group>";
+		};
+		8416B34826B6EBA000B0C50A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34926B6EBA000B0C50A /* Coordinators */,
+				8416B34C26B6EBA000B0C50A /* StoryBoard */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8416B34926B6EBA000B0C50A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */,
+				8416B34B26B6EBA000B0C50A /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		8416B34C26B6EBA000B0C50A /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8416B31226B6E51900B0C50A /* ViewController.swift in Sources */,
+				8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */,
 				8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */,
 				8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */,
+				8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */,
+				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,
+				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
+				8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */,
+				8416B34526B6EB6000B0C50A /* Header.swift in Sources */,
 				8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */,
+				8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
