@@ -20,6 +20,7 @@
 		8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */; };
 		8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34B26B6EBA000B0C50A /* Coordinator.swift */; };
 		8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */; };
+		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8416B34B26B6EBA000B0C50A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
+		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				8416B34826B6EBA000B0C50A /* Helper */,
 				8416B34226B6EB6000B0C50A /* Header.swift */,
+				84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */,
 				8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */,
+				84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */,
 				8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */,
 				8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */,
 				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,

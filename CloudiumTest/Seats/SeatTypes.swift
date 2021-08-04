@@ -22,8 +22,8 @@ enum SeatType: Int, CaseIterable {
     var seatsInSection: Int {
         switch self {
         case .recliner: return 7
-        case .prime:  return 40
-        case .classicPlus: return 60
+        case .prime:  return 32
+        case .classicPlus: return 70
         }
     }
     var seatTitle: String {
@@ -35,12 +35,34 @@ enum SeatType: Int, CaseIterable {
     }
     var rowsInSet: Int {
         switch self {
-        case .recliner:
-            return 7
-        case .prime:
-            return 8
-        case .classicPlus:
-            return 10
+        case .recliner: return 7
+        case .prime: return 8
+        case .classicPlus: return 10
         }
+    }
+    var rowToHide: Int {
+        switch self {
+        case .recliner: return 3
+        case .prime: return 4
+        case .classicPlus: return 5
+        }
+    }
+    var seatLabel: [String] {
+        switch self {
+        case .recliner:
+            return ["Q"]
+        case .prime:
+            return ["P", "N", "M", "L"]
+        case .classicPlus:
+            return ["K", "J", "H", "G", "F", "E", "D"]
+        }
+    }
+    func getSeatName(_ indexPath: IndexPath) -> String {
+    
+        guard let seat: SeatType = SeatType(rawValue: indexPath.section) else { fatalError() }
+        let k = indexPath.row%(seat.rowsInSet)
+        let v = indexPath.row / seat.rowsInSet
+        print(v)
+        return seat.seatLabel[v]
     }
 }

@@ -20,7 +20,7 @@ class SecondViewController: UIViewController, StoryBoardInitiable {
         let collectionView: UICollectionView = UICollectionView(frame: .zero,
                                                                 collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .white//#18191E
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CustomCell.self,
@@ -64,14 +64,26 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell: CustomCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: String(describing: CustomCell.self),
                 for: indexPath) as? CustomCell else { fatalError() }
-        cell.label.text = String(indexPath.item)
+//        cell.label.text = String(indexPath.item)
 
-        if let section = SeatType(rawValue: indexPath.section),
-           indexPath.row%(section.rowsInSet) == 0 {
-            cell.contentView.backgroundColor = .green
-        } else  {
-            cell.contentView.backgroundColor = .systemBlue
-        }
+//        if let section = SeatType(rawValue: indexPath.section) {
+//            if indexPath.row%(section.rowsInSet) == 0 {
+//                cell.contentView.backgroundColor = .green
+//                cell.isHidden = false
+//                cell.label.text = section.getSeatName(indexPath)
+//            } else if indexPath.row%section.rowToHide == 0 {
+//                cell.isHidden = true
+//                cell.label.text = nil
+//            } else  {
+//                cell.contentView.backgroundColor = .blue
+//                cell.isHidden = false
+//                cell.label.text = nil
+//            }
+//        }
+        cell.configureWith(indexPath)
+        
+        
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -140,64 +152,3 @@ extension SecondViewController: UICollectionViewDelegateFlowLayout {
 }
 
 
-
-//        switch seatType {
-//        case .recliner :
-//            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-//            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-//            return .init(width: itemWidth,
-//                         height: itemWidth)
-//        case .prime:
-//            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-//
-//            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-//
-//            return .init(width: itemWidth,
-//                         height: itemWidth)
-//        case .classicPlus:
-//            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-//
-//            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-//
-//            return .init(width: itemWidth,
-//                         height: itemWidth)
-//        }
-class CustomCell: UICollectionViewCell {
-    
-    
-    var label: UILabel = {
-        
-        let view: UILabel = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-    }()
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func commonInit() {
-        contentView.backgroundColor = .systemBlue
-        contentView.addSubview(label)
-        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        label.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0).isActive = true
-        label.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0).isActive = true
-        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        
-        label.textAlignment = .center
-        label.font = .boldSystemFont(ofSize: 14)
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.black.cgColor
-        label.layer.cornerRadius = 8
-        layer.cornerRadius = 8
-        clipsToBounds = true
-    }
-    
-}
