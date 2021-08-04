@@ -45,19 +45,27 @@ class CustomCell: UICollectionViewCell {
         clipsToBounds = true
     }
     
-    func configureWith(_ indexPath: IndexPath) {
-        if let section = SeatType(rawValue: indexPath.section) {
-            if indexPath.row%(section.rowsInSet) == 0 {
-                contentView.backgroundColor = .green
-                isHidden = false
-                label.text = section.getSeatName(indexPath)
-            } else if indexPath.row%section.rowToHide == 0 {
-                isHidden = true
-                label.text = nil
-            } else  {
+    func configureWith(_ indexPath: IndexPath, viewModel: BookSeatViewModel) {
+        
+        guard let section = SeatType(rawValue: indexPath.section) else {
+            return
+        }
+      
+        if indexPath.row%(section.rowsInSet) == 0 {
+            contentView.backgroundColor = .green
+            isHidden = false
+            label.text = section.getSeatName(indexPath)
+        } else if indexPath.row%section.rowToHide == 0 {
+            isHidden = true
+            label.text = nil
+        } else  {
+            contentView.backgroundColor = .blue
+            isHidden = false
+            label.text = nil
+            if viewModel.selectedSeats.contains(section.seatID(indexPath)) {
+                contentView.backgroundColor = .red
+            } else {
                 contentView.backgroundColor = .blue
-                isHidden = false
-                label.text = nil
             }
         }
     }

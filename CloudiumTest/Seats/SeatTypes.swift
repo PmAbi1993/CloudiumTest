@@ -60,9 +60,13 @@ enum SeatType: Int, CaseIterable {
     func getSeatName(_ indexPath: IndexPath) -> String {
     
         guard let seat: SeatType = SeatType(rawValue: indexPath.section) else { fatalError() }
-        let k = indexPath.row%(seat.rowsInSet)
         let v = indexPath.row / seat.rowsInSet
         print(v)
         return seat.seatLabel[v]
+    }
+    func seatID(_ indexPath: IndexPath) -> String {
+        let seatName: String = getSeatName(indexPath) + "\(indexPath.row)"
+        print(seatName)
+        return seatName
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class SecondViewController: UIViewController, StoryBoardInitiable {
     static var storyBoardName: EXStorBoardName { .default }
     
+    var viewModel: BookSeatViewModel!
     
     
     lazy var collectionView: UICollectionView = {
@@ -38,7 +39,7 @@ class SecondViewController: UIViewController, StoryBoardInitiable {
         
         self.title = "Book Seats"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
+        viewModel = .init(numberOfSeatsToSelect: 3)
 
         view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
@@ -53,7 +54,7 @@ class SecondViewController: UIViewController, StoryBoardInitiable {
 extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return SeatType.allCases.count// Section.allCases.count
+        return SeatType.allCases.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let section = SeatType(rawValue: section) else { fatalError() }
@@ -64,30 +65,17 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell: CustomCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: String(describing: CustomCell.self),
                 for: indexPath) as? CustomCell else { fatalError() }
-//        cell.label.text = String(indexPath.item)
-
-//        if let section = SeatType(rawValue: indexPath.section) {
-//            if indexPath.row%(section.rowsInSet) == 0 {
-//                cell.contentView.backgroundColor = .green
-//                cell.isHidden = false
-//                cell.label.text = section.getSeatName(indexPath)
-//            } else if indexPath.row%section.rowToHide == 0 {
-//                cell.isHidden = true
-//                cell.label.text = nil
-//            } else  {
-//                cell.contentView.backgroundColor = .blue
-//                cell.isHidden = false
-//                cell.label.text = nil
-//            }
-//        }
-        cell.configureWith(indexPath)
-        
-        
-        
+        cell.configureWith(indexPath, viewModel: viewModel)
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         print("Clicked on cell seat \(indexPath.row) at section: \(SeatType(rawValue: indexPath.section)!)")
+        viewModel.handleSeatSelection(indexPath: indexPath) { [weak self] status in
+            if status {
+                self?.collectionView.reloadData()
+            }
+        }
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header: Header = collectionView.dequeueReusableSupplementaryView(
