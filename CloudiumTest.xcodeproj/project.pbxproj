@@ -22,12 +22,13 @@
 		8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */; };
 		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 		84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */; };
-		84ADA4F426BAD8CD007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4F226BAD8CD007E9AF0 /* SavedSeats+CoreDataClass.swift */; };
-		84ADA4F526BAD8CD007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4F326BAD8CD007E9AF0 /* SavedSeats+CoreDataProperties.swift */; };
 		84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */; };
 		84ADA4FE26BAD9F2007E9AF0 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4FD26BAD9F2007E9AF0 /* ManagedObject.swift */; };
 		84ADA50226BADD65007E9AF0 /* SavedSeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA50126BADD65007E9AF0 /* SavedSeats.swift */; };
 		84ADA50526BAE2C1007E9AF0 /* SeatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA50426BAE2C1007E9AF0 /* SeatStatus.swift */; };
+		84ADA51626BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51426BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift */; };
+		84ADA51726BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51526BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift */; };
+		84ADA51B26BAFCE6007E9AF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +49,13 @@
 		8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeatViewModel.swift; sourceTree = "<group>"; };
-		84ADA4F226BAD8CD007E9AF0 /* SavedSeats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataClass.swift"; sourceTree = "<group>"; };
-		84ADA4F326BAD8CD007E9AF0 /* SavedSeats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
 		84ADA4FD26BAD9F2007E9AF0 /* ManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
 		84ADA50126BADD65007E9AF0 /* SavedSeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSeats.swift; sourceTree = "<group>"; };
 		84ADA50426BAE2C1007E9AF0 /* SeatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatStatus.swift; sourceTree = "<group>"; };
+		84ADA51426BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84ADA51526BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				8416B30F26B6E51900B0C50A /* SceneDelegate.swift */,
 				8416B31126B6E51900B0C50A /* SecondViewController.swift */,
 				84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */,
+				84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */,
 				8416B33E26B6EAF400B0C50A /* TabBarController.swift */,
 				84ADA4FC26BAD9E6007E9AF0 /* Extensions */,
 				84ADA4F026BAD855007E9AF0 /* CoreData */,
@@ -161,8 +164,8 @@
 		84ADA4F126BAD8A6007E9AF0 /* CoreData models */ = {
 			isa = PBXGroup;
 			children = (
-				84ADA4F226BAD8CD007E9AF0 /* SavedSeats+CoreDataClass.swift */,
-				84ADA4F326BAD8CD007E9AF0 /* SavedSeats+CoreDataProperties.swift */,
+				84ADA51426BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift */,
+				84ADA51526BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift */,
 			);
 			path = "CoreData models";
 			sourceTree = "<group>";
@@ -247,12 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */,
-				84ADA4F426BAD8CD007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */,
 				84ADA4FE26BAD9F2007E9AF0 /* ManagedObject.swift in Sources */,
+				84ADA51B26BAFCE6007E9AF0 /* HomeViewController.swift in Sources */,
 				8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */,
 				84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */,
 				84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */,
 				84ADA50526BAE2C1007E9AF0 /* SeatStatus.swift in Sources */,
+				84ADA51726BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */,
 				84ADA50226BADD65007E9AF0 /* SavedSeats.swift in Sources */,
 				8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */,
 				8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */,
@@ -260,10 +264,10 @@
 				84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */,
 				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
 				8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */,
-				84ADA4F526BAD8CD007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */,
 				8416B34526B6EB6000B0C50A /* Header.swift in Sources */,
 				8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */,
 				8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */,
+				84ADA51626BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

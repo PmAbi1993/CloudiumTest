@@ -16,10 +16,12 @@ extension SavedSeats {
         return NSFetchRequest<SavedSeats>(entityName: "SavedSeats")
     }
 
-    @NSManaged public var seatIt: String?
+    @NSManaged public var seatId: String?
+    @NSManaged public var sessionTicketPrice: Double
+    @NSManaged public var session: UUID?
 
 }
 
 extension SavedSeats : Identifiable {
-}
 
+}

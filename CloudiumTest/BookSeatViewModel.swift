@@ -17,7 +17,7 @@ class BookSeatViewModel {
         self.numberOfSeatsToSelect = numberOfSeatsToSelect
         
         let allSeats = SavedSeats.allCases()
-        bookedSeats = Set<String>(allSeats.compactMap({ $0.seatIt }))
+        bookedSeats = Set<String>(allSeats.compactMap({ $0.seatId }))
     }
     
     func handleSeatSelection(indexPath: IndexPath,
@@ -31,6 +31,7 @@ class BookSeatViewModel {
             || indexPath.row%section.rowToHide == 0
             || bookedSeats.contains(seatID)  {
             print("Current Ticket Price: \(currentTicketPrice)")
+            saveSeatsInSelection()
             completionHandler(false)
         } else {
             if numberOfSeatsToSelect >= 0 || selectedSeats.contains(seatID) {
@@ -50,7 +51,8 @@ class BookSeatViewModel {
     }
     
     func saveSeatsInSelection() {
-        SavedSeats.saveSeats(with: selectedSeats)
+        SavedSeats.saveSeats(with: selectedSeats,
+                             ticketPrice: currentTicketPrice)
     }
     func getSeatStatus(at indexPath: IndexPath) -> SeatStatus {
         guard let section = SeatType(rawValue: indexPath.section) else {

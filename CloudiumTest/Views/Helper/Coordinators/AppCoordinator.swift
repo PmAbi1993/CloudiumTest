@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     func start() {
-        let controller: TabBarController = .instance()
+        let controller: HomeViewController = .instance()
         navigationController.navigationBar.prefersLargeTitles = true
         self.navigationController.pushViewController(controller, animated: true)
     }
