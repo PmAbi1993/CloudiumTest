@@ -45,6 +45,23 @@ class CustomCell: UICollectionViewCell {
         clipsToBounds = true
     }
     
+    
+    func configureWith(_ indexPath: IndexPath, seatStatus: SeatStatus) {
+        
+        guard let section = SeatType(rawValue: indexPath.section) else {
+            fatalError()
+        }
+        contentView.backgroundColor = seatStatus.color
+        isHidden = seatStatus.isHidden
+        
+        switch seatStatus {
+        case .placeholder:
+            label.text = section.getSeatName(indexPath)
+        default:
+            label.text = nil
+        }
+    }
+    
     func configureWith(_ indexPath: IndexPath, viewModel: BookSeatViewModel) {
         
         guard let section = SeatType(rawValue: indexPath.section) else {

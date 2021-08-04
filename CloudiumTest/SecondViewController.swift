@@ -65,7 +65,8 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell: CustomCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: String(describing: CustomCell.self),
                 for: indexPath) as? CustomCell else { fatalError() }
-        cell.configureWith(indexPath, viewModel: viewModel)
+//        cell.configureWith(indexPath, viewModel: viewModel)
+        cell.configureWith(indexPath, seatStatus: viewModel.getSeatStatus(at: indexPath))
         return cell
     }
     func collectionView(_ collectionView: UICollectionView,
