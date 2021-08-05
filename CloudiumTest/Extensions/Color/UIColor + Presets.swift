@@ -11,4 +11,10 @@ extension UIColor {
     static var appBackgroundColor: UIColor {
         return UIColor("#18191E")
     }
+    static var accentColor: UIColor {
+        return UIColor("#376BFE")
+    }
+    static var appGrey: UIColor {
+        return UIColor("#282A37")
+    }
 }

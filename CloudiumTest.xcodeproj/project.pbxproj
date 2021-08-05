@@ -25,6 +25,7 @@
 		847483AB26BBC4B600B9366B /* UIColor + Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AA26BBC4B600B9366B /* UIColor + Presets.swift */; };
 		847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */; };
 		847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483B326BBCB7E00B9366B /* PaddingLabel.swift */; };
+		8491EEB326BBD21600C61F18 /* BookTicketsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */; };
 		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 		84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */; };
 		84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */; };
@@ -60,6 +61,7 @@
 		847483AA26BBC4B600B9366B /* UIColor + Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Presets.swift"; sourceTree = "<group>"; };
 		847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsTableCell.swift; sourceTree = "<group>"; };
 		847483B326BBCB7E00B9366B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketsFooter.swift; sourceTree = "<group>"; };
 		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeatViewModel.swift; sourceTree = "<group>"; };
 		84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				8416B31126B6E51900B0C50A /* BookTicketViewController.swift */,
+				8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */,
 				84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */,
 			);
 			path = "Book Tickets";
@@ -388,6 +391,7 @@
 				847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */,
 				8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */,
 				84ADA51626BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */,
+				8491EEB326BBD21600C61F18 /* BookTicketsFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MY56XZDP3;
 				INFOPLIST_FILE = CloudiumTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,6 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MY56XZDP3;
 				INFOPLIST_FILE = CloudiumTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

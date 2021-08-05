@@ -12,7 +12,7 @@ protocol ManagedObject { }
 extension ManagedObject where Self: NSManagedObject {
     
     static var context: NSManagedObjectContext { DatabaseConnection.default.context }
-//    static var coordinator
+    // Todo: -  static var coordinator
     static func allCases() -> [Self] {
         do {
             let fetchRequest: NSFetchRequest = Self.fetchRequest()

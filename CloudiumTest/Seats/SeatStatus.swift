@@ -21,11 +21,11 @@ enum SeatStatus {
         case .selected:
             return .green
         case .unselected:
-            return UIColor("#282A37")//UIColor("#8B8C90")//.blue
+            return .appGrey//UIColor("#282A37")
         case .hidden:
             return .clear
         case .placeholder:
-            return UIColor("#376BFE")//.blue
+            return .accentColor
         }
     }
     var isHidden: Bool {

@@ -16,7 +16,7 @@ class HomeItemsTableCell: UITableViewCell {
 //                                                       8)
         let containerView: PaddingLabel = PaddingLabel(withInsets: 8, 8, 8, 8)
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = UIColor("#376BFE")//UIColor("#282A37")
+        containerView.backgroundColor = .accentColor
         containerView.font = .boldSystemFont(ofSize: 16)
         containerView.textColor = .white
         containerView.layer.cornerRadius = 4

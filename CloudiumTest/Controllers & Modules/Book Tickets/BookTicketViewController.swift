@@ -29,7 +29,9 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         collectionView.register(Header.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: String(describing: Header.self))
-        
+        collectionView.register(BookTicketsFooter.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: String(describing: BookTicketsFooter.self))
         return collectionView
     }()
 
@@ -42,10 +44,10 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         viewModel = .init(numberOfSeatsToSelect: 3)
 
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
 
     }
 
@@ -87,8 +89,10 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
         header.configureHeader(seat: SeatType(rawValue: indexPath.section))
         return header
     }
-    
 }
+
+// MARK: Footer
+
 
 
 extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
@@ -106,26 +110,26 @@ extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
         
         
         switch seatType {
-                case .recliner :
-                    let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-                    let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-                    return .init(width: itemWidth,
-                                 height: itemWidth)
-                case .prime:
-                    let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-        
-                    let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-        
-                    return .init(width: itemWidth,
-                                 height: itemWidth)
-                case .classicPlus:
-                    let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-        
-                    let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-        
-                    return .init(width: itemWidth,
-                                 height: itemWidth)
-                }
+        case .recliner :
+            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
+            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
+            return .init(width: itemWidth,
+                         height: itemWidth)
+        case .prime:
+            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
+            
+            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
+            
+            return .init(width: itemWidth,
+                         height: itemWidth)
+        case .classicPlus:
+            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
+            
+            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) 
+            
+            return .init(width: itemWidth,
+                         height: itemWidth)
+        }
 
         
         
