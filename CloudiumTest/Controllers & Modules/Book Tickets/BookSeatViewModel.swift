@@ -31,7 +31,6 @@ class BookSeatViewModel {
             || indexPath.row%section.rowToHide == 0
             || bookedSeats.contains(seatID)  {
             print("Current Ticket Price: \(currentTicketPrice)")
-            saveSeatsInSelection()
             completionHandler(false)
         } else {
             if numberOfSeatsToSelect >= 0 || selectedSeats.contains(seatID) {
