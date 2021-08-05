@@ -65,14 +65,12 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let cell: CustomCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: String(describing: CustomCell.self),
                 for: indexPath) as? CustomCell else { fatalError() }
-//        cell.configureWith(indexPath, viewModel: viewModel)
         cell.configureWith(indexPath,
                            seatStatus: viewModel.getSeatStatus(at: indexPath))
         return cell
     }
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        print("Clicked on cell seat \(indexPath.row) at section: \(SeatType(rawValue: indexPath.section)!)")
         viewModel.handleSeatSelection(indexPath: indexPath) { [weak self] status in
             if status {
                 self?.collectionView.reloadData()
