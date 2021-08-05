@@ -34,12 +34,22 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         return collectionView
     }()
 
+    init(name: String, noOfSeats: Int) {
+        super.init(nibName: nil, bundle: nil)
+        viewModel = .init(numberOfSeatsToSelect: noOfSeats,
+                          userName: name)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Book Seats"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        viewModel = .init(numberOfSeatsToSelect: 3)
+//        viewModel = .init(numberOfSeatsToSelect: 3)
         extendedLayoutIncludesOpaqueBars = true
 
         view.addSubview(collectionView)

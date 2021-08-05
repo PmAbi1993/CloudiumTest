@@ -9,12 +9,14 @@ import Foundation
 
 class BookSeatViewModel {
     var selectedSeats: Set<String> = []
-    var numberOfSeatsToSelect: Int = 0
     var bookedSeats: Set<String> = []
     var currentTicketPrice: Double = 0
     
-    init(numberOfSeatsToSelect: Int) {
+    private var numberOfSeatsToSelect: Int = 0
+    private var userName: String = ""
+    init(numberOfSeatsToSelect: Int, userName: String) {
         self.numberOfSeatsToSelect = numberOfSeatsToSelect
+        self.userName = userName
         getAllSavedSeats()
     }
     fileprivate func getAllSavedSeats() {

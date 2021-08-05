@@ -64,8 +64,8 @@ extension HomeViewController {
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .default, handler: {
                                             (action : UIAlertAction!) -> Void in })
-        alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
         self.navigationController?.present(alertController, animated: true, completion: nil)
     }
     
