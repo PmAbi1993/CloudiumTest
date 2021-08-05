@@ -33,15 +33,15 @@
 		84ADA50526BAE2C1007E9AF0 /* SeatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA50426BAE2C1007E9AF0 /* SeatStatus.swift */; };
 		84ADA51B26BAFCE6007E9AF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */; };
 		84ADA52126BAFF4D007E9AF0 /* HomeItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA52026BAFF4D007E9AF0 /* HomeItemsModel.swift */; };
-		84C2708D26BC0EA40017F21B /* Seat+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2708926BC0EA40017F21B /* Seat+CoreDataClass.swift */; };
-		84C2708E26BC0EA40017F21B /* Seat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2708A26BC0EA40017F21B /* Seat+CoreDataProperties.swift */; };
-		84C2708F26BC0EA40017F21B /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2708B26BC0EA40017F21B /* SavedSeats+CoreDataClass.swift */; };
-		84C2709026BC0EA40017F21B /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2708C26BC0EA40017F21B /* SavedSeats+CoreDataProperties.swift */; };
 		84DA18DF26BB01300019DA5F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA18DE26BB01300019DA5F /* TableView.swift */; };
 		84DA18E326BB03DA0019DA5F /* BookedTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA18E226BB03DA0019DA5F /* BookedTicketsVC.swift */; };
 		84E1B11E26BC1A0A0038AF68 /* BookedTicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1B11D26BC1A0A0038AF68 /* BookedTicketsViewModel.swift */; };
 		84E7708626BC26F300885220 /* Sequence + safety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7708526BC26F300885220 /* Sequence + safety.swift */; };
 		84E7708A26BC2E1900885220 /* HomeViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7708926BC2E1900885220 /* HomeViewController + Alerts.swift */; };
+		84E7709426BC317100885220 /* Seat+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709026BC317100885220 /* Seat+CoreDataClass.swift */; };
+		84E7709526BC317100885220 /* Seat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709126BC317100885220 /* Seat+CoreDataProperties.swift */; };
+		84E7709626BC317100885220 /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709226BC317100885220 /* SavedSeats+CoreDataClass.swift */; };
+		84E7709726BC317100885220 /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709326BC317100885220 /* SavedSeats+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,15 +73,15 @@
 		84ADA50426BAE2C1007E9AF0 /* SeatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatStatus.swift; sourceTree = "<group>"; };
 		84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84ADA52026BAFF4D007E9AF0 /* HomeItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsModel.swift; sourceTree = "<group>"; };
-		84C2708926BC0EA40017F21B /* Seat+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seat+CoreDataClass.swift"; sourceTree = "<group>"; };
-		84C2708A26BC0EA40017F21B /* Seat+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seat+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		84C2708B26BC0EA40017F21B /* SavedSeats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataClass.swift"; sourceTree = "<group>"; };
-		84C2708C26BC0EA40017F21B /* SavedSeats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84DA18DE26BB01300019DA5F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		84DA18E226BB03DA0019DA5F /* BookedTicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedTicketsVC.swift; sourceTree = "<group>"; };
 		84E1B11D26BC1A0A0038AF68 /* BookedTicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedTicketsViewModel.swift; sourceTree = "<group>"; };
 		84E7708526BC26F300885220 /* Sequence + safety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence + safety.swift"; sourceTree = "<group>"; };
 		84E7708926BC2E1900885220 /* HomeViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Alerts.swift"; sourceTree = "<group>"; };
+		84E7709026BC317100885220 /* Seat+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seat+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84E7709126BC317100885220 /* Seat+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seat+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84E7709226BC317100885220 /* SavedSeats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84E7709326BC317100885220 /* SavedSeats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,10 +262,10 @@
 		84ADA4F126BAD8A6007E9AF0 /* CoreData models */ = {
 			isa = PBXGroup;
 			children = (
-				84C2708926BC0EA40017F21B /* Seat+CoreDataClass.swift */,
-				84C2708A26BC0EA40017F21B /* Seat+CoreDataProperties.swift */,
-				84C2708B26BC0EA40017F21B /* SavedSeats+CoreDataClass.swift */,
-				84C2708C26BC0EA40017F21B /* SavedSeats+CoreDataProperties.swift */,
+				84E7709026BC317100885220 /* Seat+CoreDataClass.swift */,
+				84E7709126BC317100885220 /* Seat+CoreDataProperties.swift */,
+				84E7709226BC317100885220 /* SavedSeats+CoreDataClass.swift */,
+				84E7709326BC317100885220 /* SavedSeats+CoreDataProperties.swift */,
 			);
 			path = "CoreData models";
 			sourceTree = "<group>";
@@ -447,18 +447,19 @@
 				8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */,
 				84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */,
 				84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */,
+				84E7709426BC317100885220 /* Seat+CoreDataClass.swift in Sources */,
+				84E7709526BC317100885220 /* Seat+CoreDataProperties.swift in Sources */,
 				841FF13E26BB072400589CAD /* HomeVCViewModel.swift in Sources */,
 				84ADA50526BAE2C1007E9AF0 /* SeatStatus.swift in Sources */,
 				84ADA50226BADD65007E9AF0 /* SavedSeats.swift in Sources */,
+				84E7709726BC317100885220 /* SavedSeats+CoreDataProperties.swift in Sources */,
 				8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */,
 				847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */,
 				84DA18E326BB03DA0019DA5F /* BookedTicketsVC.swift in Sources */,
 				84DA18DF26BB01300019DA5F /* TableView.swift in Sources */,
 				84E7708A26BC2E1900885220 /* HomeViewController + Alerts.swift in Sources */,
-				84C2708D26BC0EA40017F21B /* Seat+CoreDataClass.swift in Sources */,
 				84E7708626BC26F300885220 /* Sequence + safety.swift in Sources */,
 				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,
-				84C2709026BC0EA40017F21B /* SavedSeats+CoreDataProperties.swift in Sources */,
 				84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */,
 				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
 				8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */,
@@ -467,11 +468,10 @@
 				8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */,
 				847483A526BBC15300B9366B /* UIColor + Create.swift in Sources */,
 				847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */,
-				84C2708F26BC0EA40017F21B /* SavedSeats+CoreDataClass.swift in Sources */,
 				8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */,
 				8491EEB326BBD21600C61F18 /* BookTicketsFooter.swift in Sources */,
+				84E7709626BC317100885220 /* SavedSeats+CoreDataClass.swift in Sources */,
 				84E1B11E26BC1A0A0038AF68 /* BookedTicketsViewModel.swift in Sources */,
-				84C2708E26BC0EA40017F21B /* Seat+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

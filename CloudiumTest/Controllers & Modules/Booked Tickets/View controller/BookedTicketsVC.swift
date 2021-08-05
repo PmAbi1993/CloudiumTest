@@ -58,7 +58,9 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label: PaddingLabel = .init(withInsets: 8, 8, 8, 8)
         label.textColor = .white
-        label.text = "Section \(section)"
+        let name: String = viewModel.allSavedSeats[section].sessionName ?? ""
+        let price: Double = viewModel.allSavedSeats[section].sessionTicketPrice
+        label.text = "Name: \(name),  Price: \(price) Rs "
         label.frame = .init(origin: .zero,
                             size: CGSize(width: tableView.frame.width,
                                          height: 40))

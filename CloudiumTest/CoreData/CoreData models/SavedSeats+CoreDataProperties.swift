@@ -16,7 +16,7 @@ extension SavedSeats {
         return NSFetchRequest<SavedSeats>(entityName: "SavedSeats")
     }
 
-    @NSManaged public var session: UUID?
+    @NSManaged public var sessionName: String?
     @NSManaged public var sessionTicketPrice: Double
     @NSManaged public var seats: NSSet?
 

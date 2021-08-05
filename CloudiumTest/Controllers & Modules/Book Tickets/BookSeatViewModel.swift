@@ -61,6 +61,7 @@ class BookSeatViewModel {
     
     func saveSeatsInSelection() {
         SavedSeats.saveSeats(with: selectedSeats,
+                             name: userName,
                              ticketPrice: currentTicketPrice)
     }
     func getSeatStatus(at indexPath: IndexPath) -> SeatStatus {
