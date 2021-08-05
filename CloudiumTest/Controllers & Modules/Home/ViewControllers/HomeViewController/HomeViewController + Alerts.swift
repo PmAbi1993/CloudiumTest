@@ -12,6 +12,7 @@ enum HomeDataError: Error {
     case improperNumberOfseats
     case seatsNotAvailable
     case general
+    case dbCleared
     var errorTitle: String {
         switch self {
         case .imporoperName:
@@ -23,6 +24,8 @@ enum HomeDataError: Error {
         case .seatsNotAvailable:
             let viewModel: HomeVCViewModel = .init()
             return "Sorry, Only \(viewModel.availableSeats()) seats available "
+        case .dbCleared:
+            return "Database has been cleared"
         }
     }
 }
@@ -75,9 +78,9 @@ extension HomeViewController {
         self.navigationController?.present(alertController, animated: true, completion: nil)
     }
     
-    func showErrorAlert(error: HomeDataError) {
+    func showAlert(error: HomeDataError, closeIn: Double = 2) {
         
-        let alertDisapperTimeInSeconds = 2.0
+        let alertDisapperTimeInSeconds = closeIn
         let alert = UIAlertController(title: nil,
                                       message: error.errorTitle,
                                       preferredStyle: .actionSheet)
@@ -86,5 +89,26 @@ extension HomeViewController {
             alert.dismiss(animated: true)
         }
     }
+    
+    func clearDatabase() {
+        let alert = UIAlertController(title: "Clear DB",
+                                      message: "This will clear all the saved tickets",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Proceed",
+                                      style: .default,
+                                      handler: { [weak self] _ in
+                                        print("Deleting all dbItems")
+                                        self?.viewModel.clearAllItemsInDb { [weak self] in
+                                            self?.showAlert(error: .dbCleared, closeIn: 1)
+                                        }
+                                      }))
+        alert.addAction(UIAlertAction(title: "Cancel",
+                                      style: .cancel,
+                                      handler: nil))
+        self.navigationController?.present(alert,
+                                           animated: true,
+                                           completion: nil)
+    }
+    
 }
 

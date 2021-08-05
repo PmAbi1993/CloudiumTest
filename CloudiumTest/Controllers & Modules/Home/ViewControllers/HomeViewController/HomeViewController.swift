@@ -52,30 +52,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch dataSource[indexPath.row] {
         case .clearAllData:
-            let alert = UIAlertController(title: "Clear DB",
-                                          message: "This will clear all the saved tickets",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Proceed",
-                                          style: .default,
-                                          handler: { [weak self] _ in
-                                            print("Deleting all dbItems")
-                                            self?.viewModel.clearAllItemsInDb {
-                                                
-                                            }
-                                          }))
-            alert.addAction(UIAlertAction(title: "Cancel",
-                                          style: .cancel,
-                                          handler: nil))
-            self.navigationController?.present(alert,
-                                               animated: true,
-                                               completion: nil)
+            clearDatabase()
         case .bookTickets:
             getNameAndNumberOfSeats { [weak self] (result) in
                 switch result {
                 case .success(let item):
                     self?.coordinator?.navigateTo(item: item)
                 case .failure(let error):
-                    self?.showErrorAlert(error: error)
+                    self?.showAlert(error: error)
                 }
             }
         default:
