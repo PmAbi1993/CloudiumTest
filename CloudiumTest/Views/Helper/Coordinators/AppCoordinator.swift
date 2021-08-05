@@ -33,6 +33,17 @@ class AppCoordinator: Coordinator {
     func navigateTo(item: HomeItemsModel) {
         switch item {
         case .bookTickets:
+//            let alertDisapperTimeInSeconds = 2.0
+//            let alert = UIAlertController(title: nil,
+//                                          message: "Toast!",
+//                                          preferredStyle: .actionSheet)
+//
+//            self.navigationController.present(alert, animated: true)
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + alertDisapperTimeInSeconds) {
+//              alert.dismiss(animated: true)
+//            }
+            
+            
             let bookTicketsController: BookTicketViewController = .init()
             self.navigationController.pushViewController(bookTicketsController,
                                                          animated: true)

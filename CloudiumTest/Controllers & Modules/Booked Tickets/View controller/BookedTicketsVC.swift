@@ -10,20 +10,7 @@ import UIKit
 class BookedTicketsVC: UIViewController {
     
     let viewModel: BookedTicketsViewModel = .init()
-    lazy var noItemsLabel: UILabel = {
-        
-        let view: UILabel = UILabel()
-        view.center = self.view.center
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "No Tickets purchased yet!!"
-        view.numberOfLines = 0
-        view.textColor = .white
-        view.font = .boldSystemFont(ofSize: 17)
-        return view
-    }()
-    
     lazy var tableView: UITableView = {
-        
         let tableView: UITableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
@@ -35,7 +22,6 @@ class BookedTicketsVC: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureView()
         handleTable()
     }
@@ -52,7 +38,6 @@ class BookedTicketsVC: UIViewController {
         ])
     }
     fileprivate func handleTable() {
-//        tableView.backgroundView = (viewModel.allSavedSeats.count == 0) ? noItemsLabel : nil
         if viewModel.allSavedSeats.count == 0 {
             tableView.setEmptyMessage("No Tickets purchased yet!!")
         } else {
@@ -94,27 +79,3 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
-
-extension UITableView {
-
-    func setEmptyMessage(_ message: String) {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0,
-                                                 width: self.bounds.size.width,
-                                                 height: self.bounds.size.height))
-        messageLabel.text = message
-        messageLabel.textColor = .white
-        messageLabel.numberOfLines = 0
-        messageLabel.textAlignment = .center
-        messageLabel.font = .boldSystemFont(ofSize: 17)//UIFont(name: "TrebuchetMS", size: 15)
-        messageLabel.sizeToFit()
-
-        self.backgroundView = messageLabel
-        self.separatorStyle = .none
-    }
-
-    func restore() {
-        self.backgroundView = nil
-        self.separatorStyle = .singleLine
-    }
-}

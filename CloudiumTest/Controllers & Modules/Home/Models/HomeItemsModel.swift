@@ -7,8 +7,14 @@
 
 import Foundation
 
-enum HomeItemsModel: CaseIterable {
-    case bookTickets
+enum HomeItemsModel {
+
+    static var allItems: [HomeItemsModel] {
+        return [.bookTickets(name: "", tickets: -1),
+                .showBookedTickets,
+                .clearAllData]
+    }
+    case bookTickets(name: String, tickets: Int)
     case showBookedTickets
     case clearAllData
     

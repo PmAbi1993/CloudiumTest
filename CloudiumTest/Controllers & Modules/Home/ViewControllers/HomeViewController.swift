@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var dataSource: [HomeItemsModel] = HomeItemsModel.allCases
+    var dataSource: [HomeItemsModel] = HomeItemsModel.allItems
     var viewModel: HomeVCViewModel = .init()
     
     var coordinator: AppCoordinator?
@@ -69,6 +69,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.present(alert,
                                                animated: true,
                                                completion: nil)
+        case .bookTickets:
+            getNameAndNumberOfSeats { [weak self] (result) in
+                switch result {
+                case .success(let item):
+                    self?.coordinator?.navigateTo(item: item)
+                case .failure(let error):
+                    self?.showErrorAlert(error: error)
+                }
+            }
         default:
             coordinator?.navigateTo(item: dataSource[indexPath.row])
         }
@@ -76,8 +85,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
-    
 }
 extension HomeViewController: StoryBoardInitiable {
     static var storyBoardName: EXStorBoardName { .default }
 }
+
