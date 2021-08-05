@@ -10,6 +10,17 @@ import UIKit
 class BookedTicketsVC: UIViewController {
     
     let viewModel: BookedTicketsViewModel = .init()
+    lazy var noItemsLabel: UILabel = {
+        
+        let view: UILabel = UILabel()
+        view.center = self.view.center
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "No Tickets purchased yet!!"
+        view.numberOfLines = 0
+        view.textColor = .white
+        view.font = .boldSystemFont(ofSize: 17)
+        return view
+    }()
     
     lazy var tableView: UITableView = {
         
@@ -25,18 +36,28 @@ class BookedTicketsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+        handleTable()
+    }
+    
+    fileprivate func configureView() {
         self.title = "Booked Tickets"
         view.backgroundColor = .appBackgroundColor
-        
-    
         view.addSubview(tableView)
-        
         NSLayoutConstraint.activate([
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
         ])
+    }
+    fileprivate func handleTable() {
+//        tableView.backgroundView = (viewModel.allSavedSeats.count == 0) ? noItemsLabel : nil
+        if viewModel.allSavedSeats.count == 0 {
+            tableView.setEmptyMessage("No Tickets purchased yet!!")
+        } else {
+            tableView.restore()
+        }
     }
 }
 
@@ -70,5 +91,30 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
         let seat = viewModel.getSeatsAt(index: indexPath.section)[indexPath.row]
         cell.textLabel?.text = seat.seatId
         return cell
+    }
+}
+
+
+
+extension UITableView {
+
+    func setEmptyMessage(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0,
+                                                 width: self.bounds.size.width,
+                                                 height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .white
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = .boldSystemFont(ofSize: 17)//UIFont(name: "TrebuchetMS", size: 15)
+        messageLabel.sizeToFit()
+
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
     }
 }
