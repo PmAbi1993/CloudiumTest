@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookTicketsFooter: UIView {
+class BookTicketsFooter: UICollectionReusableView {
 
     var label: PaddingLabel = {
         
@@ -15,7 +15,7 @@ class BookTicketsFooter: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .green
         view.textAlignment = .right
-        view.text = "Ticket price: RS 0.0 "
+        view.text = "Ticket price: Rs 0.0 "
         return view
     }()
     
@@ -38,5 +38,8 @@ class BookTicketsFooter: UIView {
             label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             label.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
         ])
+    }
+    func configureWith(price: Double) {
+        label.text = "Ticket price: Rs \(price)"
     }
 }

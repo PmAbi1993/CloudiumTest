@@ -17,6 +17,5 @@ extension SavedSeats {
             seat.sessionTicketPrice = ticketPrice
             try? context.save()
         }
-        
     }
 }

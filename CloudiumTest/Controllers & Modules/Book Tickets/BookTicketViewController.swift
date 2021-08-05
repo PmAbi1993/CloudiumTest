@@ -12,7 +12,6 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
     
     var viewModel: BookSeatViewModel!
     
-    
     lazy var collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = .init()
         layout.minimumInteritemSpacing = 2
@@ -21,7 +20,7 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         let collectionView: UICollectionView = UICollectionView(frame: .zero,
                                                                 collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .appBackgroundColor// UIColor("#18191E")//#18191E
+        collectionView.backgroundColor = .appBackgroundColor
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CustomCell.self,
@@ -37,7 +36,6 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         self.title = "Book Seats"
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -49,9 +47,43 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-
     }
 
+    @objc func handleBuy() {
+        let alert = UIAlertController(title: "Buy Seats",
+                                      message: "Buy Seats for \(viewModel.currentTicketPrice)?",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Buy",
+                                      style: .default,
+                                      handler: { [weak self] _ in
+                                        self?.viewModel.saveSeatsInSelection()
+                                        self?.navigationController?.popViewController(animated: true)
+                                      }))
+        alert.addAction(UIAlertAction(title: "Cancel",
+                                      style: .cancel,
+                                      handler: nil))
+        self.navigationController?.present(alert,
+                                           animated: true,
+                                           completion: nil)
+    }
+    
+    private func updateBuyButton() {
+        let price: Double = viewModel.currentTicketPrice
+        if price > 0 {
+            let profileButton = UIButton()
+            profileButton.frame = CGRect(x:0, y:30, width:100, height:30)
+            profileButton.setTitle("Buy: \(price)", for: .normal)
+            profileButton.backgroundColor = .accentColor
+            profileButton.setTitleColor(.white, for: .normal)
+            profileButton.layer.cornerRadius = 5.0
+            profileButton.addTarget(self, action: #selector(handleBuy), for: .touchUpInside)
+            
+            let rightBarButton = UIBarButtonItem(customView: profileButton)
+            self.navigationItem.rightBarButtonItem = rightBarButton
+        } else {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+    }
 
 }
 extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -77,8 +109,20 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
         viewModel.handleSeatSelection(indexPath: indexPath) { [weak self] status in
             if status {
                 self?.collectionView.reloadData()
+                updateBuyButton()
             }
         }
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        .init(width: view.frame.width,
+              height: 45)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        .init(width: view.frame.width,
+              height: section == 2 ? 45 : 0)
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
      
@@ -92,34 +136,24 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
             }
             header.configureHeader(seat: SeatType(rawValue: indexPath.section))
             return header
+        case UICollectionView.elementKindSectionFooter:
+            guard let footer: BookTicketsFooter = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionFooter,
+                    withReuseIdentifier: String(describing: BookTicketsFooter.self),
+                    for: indexPath) as? BookTicketsFooter else {
+                fatalError()
+            }
+            footer.configureWith(price: viewModel.currentTicketPrice)
+            return footer
         default:
             fatalError()
         }
-        
-        
-        
-//        guard let header: Header = collectionView.dequeueReusableSupplementaryView(
-//                ofKind: UICollectionView.elementKindSectionHeader,
-//                withReuseIdentifier: String(describing: Header.self),
-//                for: indexPath) as? Header else {
-//            fatalError()
-//        }
-//        header.configureHeader(seat: SeatType(rawValue: indexPath.section))
-//        return header
     }
 }
 
 // MARK: Footer
-
-
-
 extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-        .init(width: view.frame.width,
-              height: 45)
-    }
+   
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

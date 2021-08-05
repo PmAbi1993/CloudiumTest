@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     fileprivate func configureTableView() {
         tableView.backgroundColor = .appBackgroundColor
         tableView.register([HomeItemsTableCell.self])
+        tableView.separatorStyle = .none
     }
 
 }

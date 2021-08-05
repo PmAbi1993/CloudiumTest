@@ -14,7 +14,6 @@
 		8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */; };
 		8416B31A26B6E51A00B0C50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31926B6E51A00B0C50A /* Assets.xcassets */; };
 		8416B31D26B6E51A00B0C50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */; };
-		8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B33E26B6EAF400B0C50A /* TabBarController.swift */; };
 		8416B34526B6EB6000B0C50A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34226B6EB6000B0C50A /* Header.swift */; };
 		8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34426B6EB6000B0C50A /* SeatTypes.swift */; };
 		8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */; };
@@ -50,7 +49,6 @@
 		8416B31926B6E51A00B0C50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8416B31C26B6E51A00B0C50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8416B31E26B6E51A00B0C50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8416B33E26B6EAF400B0C50A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8416B34226B6EB6000B0C50A /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		8416B34426B6EB6000B0C50A /* SeatTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatTypes.swift; sourceTree = "<group>"; };
 		8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -106,16 +104,14 @@
 		8416B30C26B6E51900B0C50A /* CloudiumTest */ = {
 			isa = PBXGroup;
 			children = (
+				84ADA4F026BAD855007E9AF0 /* CoreData */,
+				8463CF7D26BBFE0C00D6EFCE /* AppDelegate */,
 				847483B226BBCB5800B9366B /* CommonViews */,
 				84ADA51D26BAFEF2007E9AF0 /* Controllers & Modules */,
 				8416B34326B6EB6000B0C50A /* Seats */,
 				8416B34126B6EB6000B0C50A /* Views */,
-				8416B30D26B6E51900B0C50A /* AppDelegate.swift */,
-				8416B30F26B6E51900B0C50A /* SceneDelegate.swift */,
-				8416B33E26B6EAF400B0C50A /* TabBarController.swift */,
 				847483A826BBC49600B9366B /* Assets */,
 				84ADA4FC26BAD9E6007E9AF0 /* Extensions */,
-				84ADA4F026BAD855007E9AF0 /* CoreData */,
 				8416B31326B6E51900B0C50A /* Main.storyboard */,
 				8416B31926B6E51A00B0C50A /* Assets.xcassets */,
 				8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */,
@@ -175,6 +171,32 @@
 				841FF13D26BB072400589CAD /* HomeVCViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8463CF7D26BBFE0C00D6EFCE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8416B30D26B6E51900B0C50A /* AppDelegate.swift */,
+				8416B30F26B6E51900B0C50A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8463CF7F26BBFE8B00D6EFCE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84ADA50126BADD65007E9AF0 /* SavedSeats.swift */,
+				84ADA4FD26BAD9F2007E9AF0 /* ManagedObject.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8463CF8026BBFE9A00D6EFCE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				84DA18DE26BB01300019DA5F /* TableView.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		847483A826BBC49600B9366B /* Assets */ = {
@@ -240,9 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				847483A926BBC4A600B9366B /* Color */,
-				84ADA4FD26BAD9F2007E9AF0 /* ManagedObject.swift */,
-				84DA18DE26BB01300019DA5F /* TableView.swift */,
-				84ADA50126BADD65007E9AF0 /* SavedSeats.swift */,
+				8463CF7F26BBFE8B00D6EFCE /* CoreData */,
+				8463CF8026BBFE9A00D6EFCE /* TableView */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,7 +400,6 @@
 				847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */,
 				84DA18E326BB03DA0019DA5F /* BookedTicketsVC.swift in Sources */,
 				84DA18DF26BB01300019DA5F /* TableView.swift in Sources */,
-				8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */,
 				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,
 				84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */,
 				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
