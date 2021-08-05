@@ -10,6 +10,7 @@ import UIKit
 enum HomeDataError: Error {
     case imporoperName
     case improperNumberOfseats
+    case seatsNotAvailable
     case general
     var errorTitle: String {
         switch self {
@@ -19,7 +20,9 @@ enum HomeDataError: Error {
             return "Please provide valid number of seat"
         case .general:
             return "Incorrect Details"
-
+        case .seatsNotAvailable:
+            let viewModel: HomeVCViewModel = .init()
+            return "Sorry, Only \(viewModel.availableSeats()) seats available "
         }
     }
 }
@@ -50,15 +53,18 @@ extension HomeViewController {
                 completion(.failure(.improperNumberOfseats))
                 return }
             
-            alertController.dismiss(animated: true) {
-                
+            alertController.dismiss(animated: true) { [weak self] in
                 guard let name: String = nameTextField.text,
                       let numberOfseats: Int = Int(numberOfSeatsField.text ?? "") else {
                         completion(.failure((nameTextField.text ?? "").isEmpty ? .imporoperName: .improperNumberOfseats))
                     return }
                 
-                completion(.success(.bookTickets(name: name,
-                                                 tickets: numberOfseats)))
+                if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
+                    completion(.failure(.seatsNotAvailable))
+                } else {
+                    completion(.success(.bookTickets(name: name,
+                                                     tickets: numberOfseats)))
+                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel",
