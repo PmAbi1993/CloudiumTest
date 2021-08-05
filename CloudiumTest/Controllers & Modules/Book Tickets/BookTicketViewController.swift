@@ -81,14 +81,31 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header: Header = collectionView.dequeueReusableSupplementaryView(
-                ofKind: UICollectionView.elementKindSectionHeader,
-                withReuseIdentifier: String(describing: Header.self),
-                for: indexPath) as? Header else {
+     
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header: Header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: String(describing: Header.self),
+                    for: indexPath) as? Header else {
+                fatalError()
+            }
+            header.configureHeader(seat: SeatType(rawValue: indexPath.section))
+            return header
+        default:
             fatalError()
         }
-        header.configureHeader(seat: SeatType(rawValue: indexPath.section))
-        return header
+        
+        
+        
+//        guard let header: Header = collectionView.dequeueReusableSupplementaryView(
+//                ofKind: UICollectionView.elementKindSectionHeader,
+//                withReuseIdentifier: String(describing: Header.self),
+//                for: indexPath) as? Header else {
+//            fatalError()
+//        }
+//        header.configureHeader(seat: SeatType(rawValue: indexPath.section))
+//        return header
     }
 }
 
@@ -101,7 +118,7 @@ extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
         .init(width: view.frame.width,
-              height: 30)
+              height: 45)
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
