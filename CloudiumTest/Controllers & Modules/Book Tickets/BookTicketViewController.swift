@@ -42,12 +42,13 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         self.title = "Book Seats"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         viewModel = .init(numberOfSeatsToSelect: 3)
+        extendedLayoutIncludesOpaqueBars = true
 
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
 
     }
 
@@ -107,39 +108,15 @@ extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         guard let seatType: SeatType = SeatType(rawValue: indexPath.section) else { fatalError() }
+        let noOfCellsInRow = seatType.rowsInSet
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { fatalError() }
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
         
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
         
-        switch seatType {
-        case .recliner :
-            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-            return .init(width: itemWidth,
-                         height: itemWidth)
-        case .prime:
-            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-            
-            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-            
-            return .init(width: itemWidth,
-                         height: itemWidth)
-        case .classicPlus:
-            let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-            
-            let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) 
-            
-            return .init(width: itemWidth,
-                         height: itemWidth)
-        }
-
-        
-        
-        
-    
-        let noOfRowsInRecliner: CGFloat = CGFloat(seatType.rowsInSet)
-        let itemWidth = (collectionView.frame.width / noOfRowsInRecliner) - (noOfRowsInRecliner) + 4
-        return .init(width: itemWidth,
-                     height: itemWidth)
-        
+        return CGSize(width: size, height: size)
     }
 }
 
