@@ -15,9 +15,17 @@ class BookSeatViewModel {
     
     init(numberOfSeatsToSelect: Int) {
         self.numberOfSeatsToSelect = numberOfSeatsToSelect
-        
-        let allSeats = SavedSeats.allCases()
-        bookedSeats = Set<String>(allSeats.compactMap({ $0.seatId }))
+        getAllSavedSeats()
+    }
+    fileprivate func getAllSavedSeats() {
+        var allSavedSeatId: [String] = []
+        let seatsSession: [SavedSeats] = SavedSeats.allCases()
+        seatsSession.forEach { (savedSeat) in
+            if let seats = savedSeat.seats?.allObjects as? [Seat] {
+                allSavedSeatId.append(contentsOf: seats.compactMap({ $0.seatId }))
+            }
+        }
+        bookedSeats = Set<String>(allSavedSeatId)
     }
     
     func handleSeatSelection(indexPath: IndexPath,

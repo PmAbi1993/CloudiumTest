@@ -2,7 +2,7 @@
 //  SavedSeats+CoreDataProperties.swift
 //  CloudiumTest
 //
-//  Created by admin on 04/08/21.
+//  Created by admin on 05/08/21.
 //
 //
 
@@ -16,9 +16,26 @@ extension SavedSeats {
         return NSFetchRequest<SavedSeats>(entityName: "SavedSeats")
     }
 
-    @NSManaged public var seatId: String?
-    @NSManaged public var sessionTicketPrice: Double
     @NSManaged public var session: UUID?
+    @NSManaged public var sessionTicketPrice: Double
+    @NSManaged public var seats: NSSet?
+
+}
+
+// MARK: Generated accessors for seats
+extension SavedSeats {
+
+    @objc(addSeatsObject:)
+    @NSManaged public func addToSeats(_ value: Seat)
+
+    @objc(removeSeatsObject:)
+    @NSManaged public func removeFromSeats(_ value: Seat)
+
+    @objc(addSeats:)
+    @NSManaged public func addToSeats(_ values: NSSet)
+
+    @objc(removeSeats:)
+    @NSManaged public func removeFromSeats(_ values: NSSet)
 
 }
 

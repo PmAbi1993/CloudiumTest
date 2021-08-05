@@ -10,12 +10,15 @@ import CoreData
 extension SavedSeats {
     static func saveSeats(with ids: Set<String>, ticketPrice: Double) {
         let sessionId: UUID = .init()
+        let session: SavedSeats = SavedSeats(context: context)
+        session.session = sessionId
+        session.sessionTicketPrice = ticketPrice
         ids.forEach {
-            let seat: SavedSeats = SavedSeats(context: context)
-            seat.session = sessionId
+            let seat: Seat = Seat(context: context)
             seat.seatId = $0
-            seat.sessionTicketPrice = ticketPrice
-            try? context.save()
+            session.addToSeats(seat)
         }
+        try? context.save()
+
     }
 }

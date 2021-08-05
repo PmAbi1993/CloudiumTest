@@ -11,6 +11,7 @@ class HomeVCViewModel {
     
     func clearAllItemsInDb(completion: () -> ()) {
         SavedSeats.removeAllInstances()
+        Seat.removeAllInstances()
         completion()
     }
     
