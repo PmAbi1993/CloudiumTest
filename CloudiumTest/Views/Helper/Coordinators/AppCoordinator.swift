@@ -11,17 +11,13 @@ import UIKit
 class AppCoordinator: Coordinator {
     var children: [Coordinator] = []
     var navigationController: UINavigationController
+    //MARK: Nav Configurations
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-//        self.navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//        self.navigationController.navigationBar.isTranslucent = false
-        
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController.navigationBar.shadowImage = UIImage()
-        self.navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        self.navigationController.navigationBar.barTintColor = .white //= [.foregroundColor: UIColor.white]
-        self.navigationController.navigationBar.tintColor = .white
-        
     }
     func start() {
         let controller: HomeViewController = .instance()
