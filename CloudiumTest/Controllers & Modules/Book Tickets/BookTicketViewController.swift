@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, StoryBoardInitiable {
+class BookTicketViewController: UIViewController, StoryBoardInitiable {
     static var storyBoardName: EXStorBoardName { .default }
     
     var viewModel: BookSeatViewModel!
@@ -21,7 +21,7 @@ class SecondViewController: UIViewController, StoryBoardInitiable {
         let collectionView: UICollectionView = UICollectionView(frame: .zero,
                                                                 collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white//#18191E
+        collectionView.backgroundColor = .appBackgroundColor// UIColor("#18191E")//#18191E
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CustomCell.self,
@@ -51,7 +51,7 @@ class SecondViewController: UIViewController, StoryBoardInitiable {
 
 
 }
-extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return SeatType.allCases.count
@@ -93,7 +93,7 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
 }
 
 
-extension SecondViewController: UICollectionViewDelegateFlowLayout {
+extension BookTicketViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -17,15 +17,15 @@ enum SeatStatus {
     var color: UIColor {
         switch self {
         case .booked:
-            return .black
+            return .systemGray
         case .selected:
-            return .red
+            return .green
         case .unselected:
-            return .blue
+            return UIColor("#282A37")//UIColor("#8B8C90")//.blue
         case .hidden:
             return .clear
         case .placeholder:
-            return .green
+            return UIColor("#376BFE")//.blue
         }
     }
     var isHidden: Bool {

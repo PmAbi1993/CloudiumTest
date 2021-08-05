@@ -9,15 +9,13 @@ import UIKit
 
 class CustomCell: UICollectionViewCell {
     
-    
     var label: UILabel = {
         
         let view: UILabel = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
+        view.textColor = .white
         return view
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,7 +42,6 @@ class CustomCell: UICollectionViewCell {
         layer.cornerRadius = 8
         clipsToBounds = true
     }
-    
     
     func configureWith(_ indexPath: IndexPath, seatStatus: SeatStatus) {
         

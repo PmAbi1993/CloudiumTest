@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B30D26B6E51900B0C50A /* AppDelegate.swift */; };
 		8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B30F26B6E51900B0C50A /* SceneDelegate.swift */; };
-		8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31126B6E51900B0C50A /* SecondViewController.swift */; };
+		8416B31226B6E51900B0C50A /* BookTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31126B6E51900B0C50A /* BookTicketViewController.swift */; };
 		8416B31526B6E51900B0C50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31326B6E51900B0C50A /* Main.storyboard */; };
 		8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */; };
 		8416B31A26B6E51A00B0C50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416B31926B6E51A00B0C50A /* Assets.xcassets */; };
@@ -20,6 +20,11 @@
 		8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */; };
 		8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34B26B6EBA000B0C50A /* Coordinator.swift */; };
 		8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */; };
+		841FF13E26BB072400589CAD /* HomeVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FF13D26BB072400589CAD /* HomeVCViewModel.swift */; };
+		847483A526BBC15300B9366B /* UIColor + Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483A426BBC15300B9366B /* UIColor + Create.swift */; };
+		847483AB26BBC4B600B9366B /* UIColor + Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AA26BBC4B600B9366B /* UIColor + Presets.swift */; };
+		847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */; };
+		847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483B326BBCB7E00B9366B /* PaddingLabel.swift */; };
 		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 		84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */; };
 		84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */; };
@@ -29,13 +34,16 @@
 		84ADA51626BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51426BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift */; };
 		84ADA51726BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51526BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift */; };
 		84ADA51B26BAFCE6007E9AF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */; };
+		84ADA52126BAFF4D007E9AF0 /* HomeItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA52026BAFF4D007E9AF0 /* HomeItemsModel.swift */; };
+		84DA18DF26BB01300019DA5F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA18DE26BB01300019DA5F /* TableView.swift */; };
+		84DA18E326BB03DA0019DA5F /* BookedTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA18E226BB03DA0019DA5F /* BookedTicketsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8416B30A26B6E51900B0C50A /* CloudiumTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudiumTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416B30D26B6E51900B0C50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8416B30F26B6E51900B0C50A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8416B31126B6E51900B0C50A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8416B31126B6E51900B0C50A /* BookTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketViewController.swift; sourceTree = "<group>"; };
 		8416B31426B6E51900B0C50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8416B31726B6E51900B0C50A /* CloudiumTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CloudiumTest.xcdatamodel; sourceTree = "<group>"; };
 		8416B31926B6E51A00B0C50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +55,11 @@
 		8416B34A26B6EBA000B0C50A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8416B34B26B6EBA000B0C50A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
+		841FF13D26BB072400589CAD /* HomeVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewModel.swift; sourceTree = "<group>"; };
+		847483A426BBC15300B9366B /* UIColor + Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Create.swift"; sourceTree = "<group>"; };
+		847483AA26BBC4B600B9366B /* UIColor + Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Presets.swift"; sourceTree = "<group>"; };
+		847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsTableCell.swift; sourceTree = "<group>"; };
+		847483B326BBCB7E00B9366B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeatViewModel.swift; sourceTree = "<group>"; };
 		84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
@@ -56,6 +69,9 @@
 		84ADA51426BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84ADA51526BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedSeats+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84ADA52026BAFF4D007E9AF0 /* HomeItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsModel.swift; sourceTree = "<group>"; };
+		84DA18DE26BB01300019DA5F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		84DA18E226BB03DA0019DA5F /* BookedTicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedTicketsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,14 +104,14 @@
 		8416B30C26B6E51900B0C50A /* CloudiumTest */ = {
 			isa = PBXGroup;
 			children = (
+				847483B226BBCB5800B9366B /* CommonViews */,
+				84ADA51D26BAFEF2007E9AF0 /* Controllers & Modules */,
 				8416B34326B6EB6000B0C50A /* Seats */,
 				8416B34126B6EB6000B0C50A /* Views */,
 				8416B30D26B6E51900B0C50A /* AppDelegate.swift */,
 				8416B30F26B6E51900B0C50A /* SceneDelegate.swift */,
-				8416B31126B6E51900B0C50A /* SecondViewController.swift */,
-				84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */,
-				84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */,
 				8416B33E26B6EAF400B0C50A /* TabBarController.swift */,
+				847483A826BBC49600B9366B /* Assets */,
 				84ADA4FC26BAD9E6007E9AF0 /* Extensions */,
 				84ADA4F026BAD855007E9AF0 /* CoreData */,
 				8416B31326B6E51900B0C50A /* Main.storyboard */,
@@ -151,6 +167,54 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
+		841FF13C26BB071200589CAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				841FF13D26BB072400589CAD /* HomeVCViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		847483A826BBC49600B9366B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		847483A926BBC4A600B9366B /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				847483A426BBC15300B9366B /* UIColor + Create.swift */,
+				847483AA26BBC4B600B9366B /* UIColor + Presets.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		847483AD26BBC60100B9366B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				847483AE26BBC60600B9366B /* TableCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		847483AE26BBC60600B9366B /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		847483B226BBCB5800B9366B /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				847483B326BBCB7E00B9366B /* PaddingLabel.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 		84ADA4F026BAD855007E9AF0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,10 +237,58 @@
 		84ADA4FC26BAD9E6007E9AF0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				847483A926BBC4A600B9366B /* Color */,
 				84ADA4FD26BAD9F2007E9AF0 /* ManagedObject.swift */,
+				84DA18DE26BB01300019DA5F /* TableView.swift */,
 				84ADA50126BADD65007E9AF0 /* SavedSeats.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84ADA51D26BAFEF2007E9AF0 /* Controllers & Modules */ = {
+			isa = PBXGroup;
+			children = (
+				84ADA51E26BAFEFC007E9AF0 /* Home */,
+				84DA18E526BB04040019DA5F /* Book Tickets */,
+				84DA18E126BB03BC0019DA5F /* Booked Tickets */,
+			);
+			path = "Controllers & Modules";
+			sourceTree = "<group>";
+		};
+		84ADA51E26BAFEFC007E9AF0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				847483AD26BBC60100B9366B /* Views */,
+				841FF13C26BB071200589CAD /* ViewModel */,
+				84ADA51F26BAFF3E007E9AF0 /* Models */,
+				84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		84ADA51F26BAFF3E007E9AF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84ADA52026BAFF4D007E9AF0 /* HomeItemsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84DA18E126BB03BC0019DA5F /* Booked Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				84DA18E226BB03DA0019DA5F /* BookedTicketsVC.swift */,
+			);
+			path = "Booked Tickets";
+			sourceTree = "<group>";
+		};
+		84DA18E526BB04040019DA5F /* Book Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				8416B31126B6E51900B0C50A /* BookTicketViewController.swift */,
+				84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */,
+			);
+			path = "Book Tickets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,23 +361,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8416B31226B6E51900B0C50A /* SecondViewController.swift in Sources */,
+				8416B31226B6E51900B0C50A /* BookTicketViewController.swift in Sources */,
 				84ADA4FE26BAD9F2007E9AF0 /* ManagedObject.swift in Sources */,
 				84ADA51B26BAFCE6007E9AF0 /* HomeViewController.swift in Sources */,
+				847483AB26BBC4B600B9366B /* UIColor + Presets.swift in Sources */,
 				8416B30E26B6E51900B0C50A /* AppDelegate.swift in Sources */,
 				84ADA4F926BAD8F4007E9AF0 /* DatabaseConnection.swift in Sources */,
 				84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */,
+				841FF13E26BB072400589CAD /* HomeVCViewModel.swift in Sources */,
 				84ADA50526BAE2C1007E9AF0 /* SeatStatus.swift in Sources */,
 				84ADA51726BAED09007E9AF0 /* SavedSeats+CoreDataProperties.swift in Sources */,
 				84ADA50226BADD65007E9AF0 /* SavedSeats.swift in Sources */,
 				8416B31026B6E51900B0C50A /* SceneDelegate.swift in Sources */,
+				847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */,
+				84DA18E326BB03DA0019DA5F /* BookedTicketsVC.swift in Sources */,
+				84DA18DF26BB01300019DA5F /* TableView.swift in Sources */,
 				8416B33F26B6EAF400B0C50A /* TabBarController.swift in Sources */,
 				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,
 				84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */,
 				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
 				8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */,
+				84ADA52126BAFF4D007E9AF0 /* HomeItemsModel.swift in Sources */,
 				8416B34526B6EB6000B0C50A /* Header.swift in Sources */,
 				8416B31826B6E51900B0C50A /* CloudiumTest.xcdatamodeld in Sources */,
+				847483A526BBC15300B9366B /* UIColor + Create.swift in Sources */,
+				847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */,
 				8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */,
 				84ADA51626BAED09007E9AF0 /* SavedSeats+CoreDataClass.swift in Sources */,
 			);
