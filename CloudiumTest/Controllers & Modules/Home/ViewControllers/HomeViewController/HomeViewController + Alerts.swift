@@ -62,11 +62,13 @@ extension HomeViewController {
                         completion(.failure((nameTextField.text ?? "").isEmpty ? .imporoperName: .improperNumberOfseats))
                     return }
                 
-                if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
+                if numberOfseats <= 0 {
+                    completion(.failure(.improperNumberOfseats))
+                } else if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
                     completion(.failure(.seatsNotAvailable))
                 } else {
                     completion(.success(.bookTickets(name: name,
-                                                     tickets: numberOfseats)))
+                                                     tickets: numberOfseats - 1)))
                 }
             }
         }
