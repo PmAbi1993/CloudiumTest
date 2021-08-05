@@ -253,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				84ADA4F126BAD8A6007E9AF0 /* CoreData models */,
-				8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */,
 				84ADA4F826BAD8F4007E9AF0 /* DatabaseConnection.swift */,
+				8416B31626B6E51900B0C50A /* CloudiumTest.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -356,10 +356,18 @@
 		84E7708826BC2E0100885220 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E7708D26BC30ED00885220 /* HomeViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84E7708D26BC30ED00885220 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
 				84ADA51A26BAFCE6007E9AF0 /* HomeViewController.swift */,
 				84E7708926BC2E1900885220 /* HomeViewController + Alerts.swift */,
 			);
-			path = ViewControllers;
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
