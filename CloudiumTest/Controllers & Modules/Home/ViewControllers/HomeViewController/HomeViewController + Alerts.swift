@@ -31,20 +31,19 @@ enum HomeDataError: Error {
 }
 
 extension HomeViewController {
-    func getNameAndNumberOfSeats(completion: @escaping (Result< HomeItemsModel, HomeDataError>) -> ()) {
+    func getNameAndNumberOfSeats(completion: @escaping (Result< HomeItemsModel, HomeDataError>) -> Void) {
         let alertController = UIAlertController(title: "Booking details",
                                                 message: "",
                                                 preferredStyle: .alert)
-        alertController.addTextField { (textField : UITextField!) -> Void in
+        alertController.addTextField { (textField: UITextField!) -> Void in
             textField.placeholder = "Enter Name"
         }
-        alertController.addTextField { (textField : UITextField!) -> Void in
+        alertController.addTextField { (textField: UITextField!) -> Void in
             textField.placeholder = "Enter Number Of seats"
             textField.keyboardType = .numberPad
         }
         let saveAction = UIAlertAction(title: "Proceed",
-                                        style: .default) {
-            (alert) in
+                                        style: .default) { _ in
             guard let textFields = alertController.textFields else {
                 completion(.failure(.general))
                 return }
@@ -55,13 +54,11 @@ extension HomeViewController {
             guard let numberOfSeatsField: UITextField = textFields[safe: 1] else {
                 completion(.failure(.improperNumberOfseats))
                 return }
-            
             alertController.dismiss(animated: true) { [weak self] in
                 guard let name: String = nameTextField.text,
                       let numberOfseats: Int = Int(numberOfSeatsField.text ?? "") else {
-                        completion(.failure((nameTextField.text ?? "").isEmpty ? .imporoperName: .improperNumberOfseats))
+                    completion(.failure((nameTextField.text ?? "").isEmpty ? .imporoperName: .improperNumberOfseats))
                     return }
-                
                 if numberOfseats <= 0 {
                     completion(.failure(.improperNumberOfseats))
                 } else if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
@@ -73,15 +70,12 @@ extension HomeViewController {
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .default, handler: {
-                                            (action : UIAlertAction!) -> Void in })
+                                         style: .default)
         alertController.addAction(cancelAction)
         alertController.addAction(saveAction)
         self.navigationController?.present(alertController, animated: true, completion: nil)
     }
-    
     func showAlert(error: HomeDataError, closeIn: Double = 2) {
-        
         let alertDisapperTimeInSeconds = closeIn
         let alert = UIAlertController(title: nil,
                                       message: error.errorTitle,
@@ -91,7 +85,6 @@ extension HomeViewController {
             alert.dismiss(animated: true)
         }
     }
-    
     func clearDatabase() {
         let alert = UIAlertController(title: "Clear DB",
                                       message: "This will clear all the saved tickets",
@@ -111,5 +104,4 @@ extension HomeViewController {
                                            animated: true,
                                            completion: nil)
     }
-    
 }

@@ -14,7 +14,10 @@ class PaddingLabel: UILabel {
     var leftInset: CGFloat
     var rightInset: CGFloat
 
-    required init(withInsets top: CGFloat, _ bottom: CGFloat,_ left: CGFloat,_ right: CGFloat) {
+    required init(withInsets top: CGFloat,
+                  _ bottom: CGFloat,
+                  _ left: CGFloat,
+                  _ right: CGFloat) {
         self.topInset = top
         self.bottomInset = bottom
         self.leftInset = left
@@ -32,11 +35,9 @@ class PaddingLabel: UILabel {
     }
 
     override var intrinsicContentSize: CGSize {
-        get {
-            var contentSize = super.intrinsicContentSize
-            contentSize.height += topInset + bottomInset
-            contentSize.width += leftInset + rightInset
-            return contentSize
-        }
+        var contentSize = super.intrinsicContentSize
+        contentSize.height += topInset + bottomInset
+        contentSize.width += leftInset + rightInset
+        return contentSize
     }
 }

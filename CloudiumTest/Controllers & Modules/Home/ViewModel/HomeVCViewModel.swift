@@ -8,14 +8,11 @@
 import Foundation
 
 class HomeVCViewModel {
-    
-    func clearAllItemsInDb(completion: () -> ()) {
+    func clearAllItemsInDb(completion: () -> Void) {
         SavedSeats.removeAllInstances()
         Seat.removeAllInstances()
         completion()
     }
-    
-    
     func availableSeats() -> Int {
         var allBookedSeats: Int = 0
         SavedSeats.allCases().forEach { (seatData) in
@@ -37,7 +34,6 @@ class HomeVCViewModel {
         let availableSeat: Int = totalSeatsAvailable - (allBookedSeats + placeHolders + hiddenSeats)
         return availableSeat
     }
-    
     func checkIfSeatsAvailable(count: Int) -> Bool {
         let availableSeat: Int = availableSeats()
         return availableSeat >= count

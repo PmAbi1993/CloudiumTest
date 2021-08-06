@@ -12,9 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var dataSource: [HomeItemsModel] = HomeItemsModel.allItems
     var viewModel: HomeVCViewModel = .init()
-    
     var coordinator: AppCoordinator?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +36,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                    numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
-    
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: HomeItemsTableCell = tableView.dequedCell(type: HomeItemsTableCell.self)
@@ -49,7 +46,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath,
                               animated: true)
-        
         switch dataSource[indexPath.row] {
         case .clearAllData:
             clearDatabase()
@@ -73,4 +69,3 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: StoryBoardInitiable {
     static var storyBoardName: EXStorBoardName { .default }
 }
-

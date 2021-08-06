@@ -9,14 +9,12 @@ import CoreData
 
 class DatabaseConnection {
     static let `default`: DatabaseConnection = .init()
-    
     private init() { }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-    
         let container = NSPersistentContainer(name: "CloudiumTest")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
@@ -41,9 +39,7 @@ class DatabaseConnection {
     lazy var context: NSManagedObjectContext  = {
         persistentContainer.viewContext
     }()
-    
     func prefetch() {
         let coordinator = persistentContainer
     }
-    
 }

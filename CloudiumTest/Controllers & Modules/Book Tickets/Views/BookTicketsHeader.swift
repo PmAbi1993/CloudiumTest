@@ -8,7 +8,6 @@
 import UIKit
 
 class BookTicketsHeader: UICollectionReusableView {
-    
     var label: PaddingLabel = {
         let view: PaddingLabel = PaddingLabel(withInsets: 8, 8, 8, 8)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -17,7 +16,6 @@ class BookTicketsHeader: UICollectionReusableView {
 
         return view
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -28,12 +26,10 @@ class BookTicketsHeader: UICollectionReusableView {
         label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
 
     }
-    
     func configureHeader(seat: SeatType?) {
         guard let seat = seat else { return }
         label.text = seat.seatTitle
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

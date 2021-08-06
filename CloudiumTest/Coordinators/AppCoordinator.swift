@@ -11,7 +11,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     var children: [Coordinator] = []
     var navigationController: UINavigationController
-    //MARK: Nav Configurations
+    // MARK: Nav Configurations
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -25,7 +25,6 @@ class AppCoordinator: Coordinator {
         navigationController.navigationBar.prefersLargeTitles = true
         self.navigationController.pushViewController(controller, animated: true)
     }
-    
     func navigateTo(item: HomeItemsModel) {
         switch item {
         case .bookTickets(name: let name, tickets: let noOfTickets):

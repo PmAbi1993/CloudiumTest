@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIViewController {
-    
-    func showAlert(message: String, closeIn: Double = 2, completion: @escaping () -> ()) {
-        
+    func showAlert(message: String,
+                   closeIn: Double = 2,
+                   completion: @escaping () -> Void) {
         let alertDisapperTimeInSeconds = closeIn
         let alert = UIAlertController(title: nil,
                                       message: message,
@@ -23,5 +23,4 @@ extension UIViewController {
             }
         }
     }
-    
 }

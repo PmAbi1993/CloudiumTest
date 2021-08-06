@@ -11,7 +11,6 @@ class BookSeatViewModel {
     var selectedSeats: Set<String> = []
     var bookedSeats: Set<String> = []
     var currentTicketPrice: Double = 0
-    
     private var numberOfSeatsToSelect: Int = 0
     private var userName: String = ""
     init(numberOfSeatsToSelect: Int, userName: String) {
@@ -29,9 +28,8 @@ class BookSeatViewModel {
         }
         bookedSeats = Set<String>(allSavedSeatId)
     }
-    
     func handleSeatSelection(indexPath: IndexPath,
-                             completionHandler: (Bool) -> ()) {
+                             completionHandler: (Bool) -> Void) {
         guard let section = SeatType(rawValue: indexPath.section) else {
             return
         }
@@ -39,7 +37,7 @@ class BookSeatViewModel {
         // The first if case will disable touches for the seat prefix cells and invisible cells
         if indexPath.row%(section.rowsInSet) == 0
             || indexPath.row%section.rowToHide == 0
-            || bookedSeats.contains(seatID)  {
+            || bookedSeats.contains(seatID) {
             print("Current Ticket Price: \(currentTicketPrice)")
             completionHandler(false)
         } else {
@@ -58,8 +56,7 @@ class BookSeatViewModel {
         }
         print("Current Ticket Price: \(currentTicketPrice)")
     }
-    
-    func saveSeatsInSelection(completion: () -> ()) {
+    func saveSeatsInSelection(completion: () -> Void) {
         SavedSeats.saveSeats(with: selectedSeats,
                              name: userName,
                              ticketPrice: currentTicketPrice)

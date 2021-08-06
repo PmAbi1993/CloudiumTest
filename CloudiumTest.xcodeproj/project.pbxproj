@@ -116,9 +116,9 @@
 		8416B30C26B6E51900B0C50A /* CloudiumTest */ = {
 			isa = PBXGroup;
 			children = (
+				8463CF7D26BBFE0C00D6EFCE /* AppDelegate */,
 				8416B34926B6EBA000B0C50A /* Coordinators */,
 				84ADA4F026BAD855007E9AF0 /* CoreData */,
-				8463CF7D26BBFE0C00D6EFCE /* AppDelegate */,
 				847483B226BBCB5800B9366B /* CommonViews */,
 				84ADA51D26BAFEF2007E9AF0 /* Controllers & Modules */,
 				847483A826BBC49600B9366B /* Assets */,
@@ -415,6 +415,7 @@
 				8416B30626B6E51900B0C50A /* Sources */,
 				8416B30726B6E51900B0C50A /* Frameworks */,
 				8416B30826B6E51900B0C50A /* Resources */,
+				8484E4FD26BD111A00715360 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -469,6 +470,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8484E4FD26BD111A00715360 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8416B30626B6E51900B0C50A /* Sources */ = {

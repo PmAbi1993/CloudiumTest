@@ -10,7 +10,6 @@ import CoreData
 protocol ManagedObject { }
 
 extension ManagedObject where Self: NSManagedObject {
-    
     static var context: NSManagedObjectContext { DatabaseConnection.default.context }
     // Todo: -  static var coordinator
     static func allCases() -> [Self] {
@@ -18,19 +17,18 @@ extension ManagedObject where Self: NSManagedObject {
             let fetchRequest: NSFetchRequest = Self.fetchRequest()
             guard let allCases: [Self] = try context.fetch(fetchRequest) as? [Self] else { return [] }
             return allCases
-        } catch  {
+        } catch {
             return []
         }
     }
     static func removeAllInstances() {
-        
-        let entityRequest : NSFetchRequest<NSFetchRequestResult> = fetchRequest()
+        let entityRequest: NSFetchRequest<NSFetchRequestResult> = fetchRequest()
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: entityRequest)
         do {
             let coordinator = DatabaseConnection.default.persistentContainer.persistentStoreCoordinator
             try coordinator.execute(batchDeleteRequest, with: context)
             try context.save()
-        }catch{
+        } catch {
             print(error)
         }
     }

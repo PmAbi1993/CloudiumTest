@@ -13,7 +13,6 @@ enum SeatStatus {
     case unselected
     case hidden
     case placeholder
-    
     var color: UIColor {
         switch self {
         case .booked:
@@ -21,7 +20,7 @@ enum SeatStatus {
         case .selected:
             return .green
         case .unselected:
-            return .appGrey//UIColor("#282A37")
+            return .appGrey
         case .hidden:
             return .clear
         case .placeholder:

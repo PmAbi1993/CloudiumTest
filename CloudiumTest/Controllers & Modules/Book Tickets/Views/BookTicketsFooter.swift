@@ -10,7 +10,6 @@ import UIKit
 class BookTicketsFooter: UICollectionReusableView {
 
     var label: PaddingLabel = {
-        
         let view: PaddingLabel = PaddingLabel(withInsets: 8, 8, 8, 8)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .green
@@ -18,20 +17,16 @@ class BookTicketsFooter: UICollectionReusableView {
         view.text = "Ticket price: Rs 0.0 "
         return view
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
     fileprivate func commonInit() {
         addSubview(label)
-        
         NSLayoutConstraint.activate([
             label.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
             label.topAnchor.constraint(equalTo: topAnchor, constant: 8),

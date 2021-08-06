@@ -17,7 +17,6 @@ enum HomeItemsModel {
     case bookTickets(name: String, tickets: Int)
     case showBookedTickets
     case clearAllData
-    
     var title: String {
         switch self {
         case .bookTickets: return "Book your Tickets"

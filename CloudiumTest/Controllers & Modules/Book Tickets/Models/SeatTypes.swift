@@ -11,7 +11,6 @@ enum SeatType: Int, CaseIterable {
     case recliner
     case prime
     case classicPlus
-    
     var ticketPrice: Double {
         switch self {
         case .recliner: return 350
@@ -59,8 +58,7 @@ enum SeatType: Int, CaseIterable {
     }
     func getSeatName(_ indexPath: IndexPath) -> String {
         guard let seat: SeatType = SeatType(rawValue: indexPath.section) else { fatalError() }
-        let v = indexPath.row / seat.rowsInSet
-        return seat.seatLabel[v]
+        return seat.seatLabel[indexPath.row / seat.rowsInSet]
     }
     func seatID(_ indexPath: IndexPath) -> String {
         let seatName: String = getSeatName(indexPath) + "\(indexPath.row)"

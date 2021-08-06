@@ -8,9 +8,7 @@
 import Foundation
 
 class BookedTicketsViewModel {
-    
     var allSavedSeats: [SavedSeats] = []
-    
     init() {
         allSavedSeats = SavedSeats.allCases()
     }

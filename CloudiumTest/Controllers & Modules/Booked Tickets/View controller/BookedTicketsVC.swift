@@ -8,7 +8,6 @@
 import UIKit
 
 class BookedTicketsVC: UIViewController {
-    
     let viewModel: BookedTicketsViewModel = .init()
     lazy var tableView: UITableView = {
         let tableView: UITableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -17,7 +16,6 @@ class BookedTicketsVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .clear
-        
         return tableView
     }()
     override func viewDidLoad() {
@@ -25,7 +23,6 @@ class BookedTicketsVC: UIViewController {
         configureView()
         handleTable()
     }
-    
     fileprivate func configureView() {
         self.title = "Booked Tickets"
         view.backgroundColor = .appBackgroundColor
@@ -34,7 +31,7 @@ class BookedTicketsVC: UIViewController {
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
     fileprivate func handleTable() {
@@ -46,9 +43,7 @@ class BookedTicketsVC: UIViewController {
     }
 }
 
-
-extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
-    
+extension BookedTicketsVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.allSavedSeats.count
     }
@@ -73,9 +68,7 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self)) else {
-            fatalError()
-        }
+        let cell: UITableViewCell = tableView.dequedCell(type: UITableViewCell.self)
         cell.backgroundColor = .white
         let seat = viewModel.getSeatsAt(index: indexPath.section)[indexPath.row]
         cell.textLabel?.text = seat.seatId
@@ -83,4 +76,3 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
