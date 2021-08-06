@@ -40,6 +40,6 @@ class DatabaseConnection {
         persistentContainer.viewContext
     }()
     func prefetch() {
-        let coordinator = persistentContainer
+        _ = persistentContainer
     }
 }
