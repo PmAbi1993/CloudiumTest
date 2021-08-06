@@ -68,7 +68,7 @@ class HomeVCViewModel {
             return .failure(.imporoperName)
         } else {
             return .success(.bookTickets(name: name,
-                                         tickets: noOfSeats))
+                                         tickets: noOfSeats - 1))
         }
     }
 }
