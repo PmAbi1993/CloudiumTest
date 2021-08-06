@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct SeatsData {
+    var totalSeatsAvailable: Int
+    var hiddenSeats: Int
+    var placeHolders: Int
+}
+
 class HomeVCViewModel {
     func clearAllItemsInDb(completion: () -> Void) {
         SavedSeats.removeAllInstances()
@@ -37,5 +43,19 @@ class HomeVCViewModel {
     func checkIfSeatsAvailable(count: Int) -> Bool {
         let availableSeat: Int = availableSeats()
         return availableSeat >= count
+    }
+    func plottedSeatsData() -> SeatsData {
+        var totalSeatsAvailable: Int = 0
+        var hiddenSeats: Int = 0
+        var placeHolders: Int = 0
+        SeatType.allCases.forEach({
+            totalSeatsAvailable += $0.seatsInSection
+            print($0.seatsInSection / $0.rowsInSet)
+            hiddenSeats += $0.seatsInSection / $0.rowsInSet
+            placeHolders += $0.seatLabel.count
+        })
+        return .init(totalSeatsAvailable: totalSeatsAvailable,
+                     hiddenSeats: hiddenSeats,
+                     placeHolders: placeHolders)
     }
 }

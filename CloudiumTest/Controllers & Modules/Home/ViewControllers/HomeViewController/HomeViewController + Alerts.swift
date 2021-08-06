@@ -63,6 +63,8 @@ extension HomeViewController {
                     completion(.failure(.improperNumberOfseats))
                 } else if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
                     completion(.failure(.seatsNotAvailable))
+                } else if name.isEmpty {
+                    completion(.failure(.imporoperName))
                 } else {
                     completion(.success(.bookTickets(name: name,
                                                      tickets: numberOfseats - 1)))

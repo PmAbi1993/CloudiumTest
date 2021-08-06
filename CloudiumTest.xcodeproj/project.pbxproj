@@ -25,6 +25,7 @@
 		847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */; };
 		847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483B326BBCB7E00B9366B /* PaddingLabel.swift */; };
 		8484E4E926BCEFCB00715360 /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E4E826BCEFCB00715360 /* UIViewController + Alert.swift */; };
+		848A3A4D26BD166F000D0DAE /* CloudiumTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A3A4C26BD166F000D0DAE /* CloudiumTestTests.swift */; };
 		8491EEB326BBD21600C61F18 /* BookTicketsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */; };
 		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 		84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */; };
@@ -44,6 +45,16 @@
 		84E7709626BC317100885220 /* SavedSeats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709226BC317100885220 /* SavedSeats+CoreDataClass.swift */; };
 		84E7709726BC317100885220 /* SavedSeats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7709326BC317100885220 /* SavedSeats+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		848A3A4F26BD166F000D0DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8416B30226B6E51900B0C50A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8416B30926B6E51900B0C50A;
+			remoteInfo = CloudiumTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8416B30A26B6E51900B0C50A /* CloudiumTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudiumTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +77,9 @@
 		847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsTableCell.swift; sourceTree = "<group>"; };
 		847483B326BBCB7E00B9366B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		8484E4E826BCEFCB00715360 /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
+		848A3A4A26BD166F000D0DAE /* CloudiumTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudiumTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848A3A4C26BD166F000D0DAE /* CloudiumTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudiumTestTests.swift; sourceTree = "<group>"; };
+		848A3A4E26BD166F000D0DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketsFooter.swift; sourceTree = "<group>"; };
 		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeatViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +108,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		848A3A4726BD166F000D0DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8416B30C26B6E51900B0C50A /* CloudiumTest */,
+				848A3A4B26BD166F000D0DAE /* CloudiumTestTests */,
 				8416B30B26B6E51900B0C50A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8416B30A26B6E51900B0C50A /* CloudiumTest.app */,
+				848A3A4A26BD166F000D0DAE /* CloudiumTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +305,15 @@
 			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
+		848A3A4B26BD166F000D0DAE /* CloudiumTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				848A3A4C26BD166F000D0DAE /* CloudiumTestTests.swift */,
+				848A3A4E26BD166F000D0DAE /* Info.plist */,
+			);
+			path = CloudiumTestTests;
+			sourceTree = "<group>";
+		};
 		84ADA4F026BAD855007E9AF0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +458,24 @@
 			productReference = 8416B30A26B6E51900B0C50A /* CloudiumTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		848A3A4926BD166F000D0DAE /* CloudiumTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848A3A5126BD166F000D0DAE /* Build configuration list for PBXNativeTarget "CloudiumTestTests" */;
+			buildPhases = (
+				848A3A4626BD166F000D0DAE /* Sources */,
+				848A3A4726BD166F000D0DAE /* Frameworks */,
+				848A3A4826BD166F000D0DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				848A3A5026BD166F000D0DAE /* PBXTargetDependency */,
+			);
+			name = CloudiumTestTests;
+			productName = CloudiumTestTests;
+			productReference = 848A3A4A26BD166F000D0DAE /* CloudiumTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -437,6 +487,10 @@
 				TargetAttributes = {
 					8416B30926B6E51900B0C50A = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					848A3A4926BD166F000D0DAE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 8416B30926B6E51900B0C50A;
 					};
 				};
 			};
@@ -454,6 +508,7 @@
 			projectRoot = "";
 			targets = (
 				8416B30926B6E51900B0C50A /* CloudiumTest */,
+				848A3A4926BD166F000D0DAE /* CloudiumTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -466,6 +521,13 @@
 				8416B31D26B6E51A00B0C50A /* LaunchScreen.storyboard in Resources */,
 				8416B31A26B6E51A00B0C50A /* Assets.xcassets in Resources */,
 				8416B31526B6E51900B0C50A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848A3A4826BD166F000D0DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +594,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		848A3A4626BD166F000D0DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848A3A4D26BD166F000D0DAE /* CloudiumTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		848A3A5026BD166F000D0DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8416B30926B6E51900B0C50A /* CloudiumTest */;
+			targetProxy = 848A3A4F26BD166F000D0DAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8416B31326B6E51900B0C50A /* Main.storyboard */ = {
@@ -708,6 +786,44 @@
 			};
 			name = Release;
 		};
+		848A3A5226BD166F000D0DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloudiumTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pm.abi.CloudiumTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudiumTest.app/CloudiumTest";
+			};
+			name = Debug;
+		};
+		848A3A5326BD166F000D0DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloudiumTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pm.abi.CloudiumTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudiumTest.app/CloudiumTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -725,6 +841,15 @@
 			buildConfigurations = (
 				8416B32226B6E51A00B0C50A /* Debug */,
 				8416B32326B6E51A00B0C50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848A3A5126BD166F000D0DAE /* Build configuration list for PBXNativeTarget "CloudiumTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848A3A5226BD166F000D0DAE /* Debug */,
+				848A3A5326BD166F000D0DAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
