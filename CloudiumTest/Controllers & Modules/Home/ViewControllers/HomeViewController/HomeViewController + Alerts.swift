@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum HomeDataError: Error {
+enum HomeDataError: Error, Equatable {
     case imporoperName
     case improperNumberOfseats
     case seatsNotAvailable
@@ -31,7 +31,7 @@ enum HomeDataError: Error {
 }
 
 extension HomeViewController {
-    func getNameAndNumberOfSeats(completion: @escaping (Result< HomeItemsModel, HomeDataError>) -> Void) {
+    func getNameAndNumberOfSeats(completion: @escaping (Result<HomeItemsModel, HomeDataError>) -> Void) {
         let alertController = UIAlertController(title: "Booking details",
                                                 message: "",
                                                 preferredStyle: .alert)
@@ -59,16 +59,11 @@ extension HomeViewController {
                       let numberOfseats: Int = Int(numberOfSeatsField.text ?? "") else {
                     completion(.failure((nameTextField.text ?? "").isEmpty ? .imporoperName: .improperNumberOfseats))
                     return }
-                if numberOfseats <= 0 {
-                    completion(.failure(.improperNumberOfseats))
-                } else if numberOfseats >= self?.viewModel.availableSeats() ?? 0 {
-                    completion(.failure(.seatsNotAvailable))
-                } else if name.isEmpty {
-                    completion(.failure(.imporoperName))
-                } else {
-                    completion(.success(.bookTickets(name: name,
-                                                     tickets: numberOfseats - 1)))
+                guard let data = self?.viewModel.verifySeatData(name: name,
+                                                             noOfSeats: numberOfseats) else {
+                    fatalError()
                 }
+                completion(data)
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel",

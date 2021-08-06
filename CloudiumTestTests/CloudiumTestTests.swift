@@ -10,17 +10,24 @@ import XCTest
 
 class CloudiumTestTests: XCTestCase {
 
-    var model: HomeVCViewModel!
+    var homeViewModel: HomeVCViewModel!
     override func setUp() {
-        model = HomeVCViewModel()
+        homeViewModel = HomeVCViewModel()
     }
     override func tearDown() {
-        model = nil
+        homeViewModel = nil
     }
-    func testSeatsAvailability() {
-        let availableSeats = model.plottedSeatsData()
+    func test_seats_data() {
+        let availableSeats = homeViewModel.plottedSeatsData()
         XCTAssert(availableSeats.hiddenSeats == 12)
         XCTAssert(availableSeats.totalSeatsAvailable == 110)
         XCTAssert(availableSeats.placeHolders == 12)
+        // Tests to verify Seat data
+        let userNameError = homeViewModel.verifySeatData(name: "", noOfSeats: 2)
+        XCTAssert(userNameError == .failure(.imporoperName))
+        let seatsError = homeViewModel.verifySeatData(name: "User", noOfSeats: -1)
+        XCTAssert(seatsError == .failure(.improperNumberOfseats))
+        let seatsErrorTwo = homeViewModel.verifySeatData(name: "User", noOfSeats: 200)
+        XCTAssert(seatsErrorTwo == .failure(.seatsNotAvailable))
     }
 }

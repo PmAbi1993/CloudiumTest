@@ -58,4 +58,17 @@ class HomeVCViewModel {
                      hiddenSeats: hiddenSeats,
                      placeHolders: placeHolders)
     }
+    func verifySeatData(name: String,
+                        noOfSeats: Int) -> Result<HomeItemsModel, HomeDataError> {
+        if noOfSeats <= 0 {
+            return .failure(.improperNumberOfseats)
+        } else if noOfSeats >= availableSeats() {
+            return .failure(.seatsNotAvailable)
+        } else if name.isEmpty {
+            return .failure(.imporoperName)
+        } else {
+            return .success(.bookTickets(name: name,
+                                         tickets: noOfSeats))
+        }
+    }
 }

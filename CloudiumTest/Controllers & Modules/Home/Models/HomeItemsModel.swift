@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HomeItemsModel {
+enum HomeItemsModel: Equatable {
 
     static var allItems: [HomeItemsModel] {
         return [.bookTickets(name: "", tickets: -1),
