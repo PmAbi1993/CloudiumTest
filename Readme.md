@@ -17,3 +17,4 @@ Macos Bigsur
 
 1. Test cases only written for the main viewModel due to time constrictions
 2. Strict MVVM followed
+3. Lint corrected all modules
