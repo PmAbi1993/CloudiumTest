@@ -66,8 +66,9 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         alert.addAction(UIAlertAction(title: "Buy",
                                       style: .default,
                                       handler: { [weak self] _ in
-                                        self?.viewModel.saveSeatsInSelection()
-                                        self?.navigationController?.popViewController(animated: true)
+                                        self?.viewModel.saveSeatsInSelection {
+                                            self?.showBookingInformation()
+                                        }
                                       }))
         alert.addAction(UIAlertAction(title: "Cancel",
                                       style: .cancel,
@@ -75,6 +76,12 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         self.navigationController?.present(alert,
                                            animated: true,
                                            completion: nil)
+    }
+    private func showBookingInformation() {
+        showAlert(message: "Seats Booked Successfully",
+                  closeIn: 1.0) { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func updateBuyButton() {

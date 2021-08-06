@@ -24,6 +24,7 @@
 		847483AB26BBC4B600B9366B /* UIColor + Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AA26BBC4B600B9366B /* UIColor + Presets.swift */; };
 		847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */; };
 		847483B426BBCB7E00B9366B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483B326BBCB7E00B9366B /* PaddingLabel.swift */; };
+		8484E4E926BCEFCB00715360 /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E4E826BCEFCB00715360 /* UIViewController + Alert.swift */; };
 		8491EEB326BBD21600C61F18 /* BookTicketsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */; };
 		84ADA4EB26BAC8F1007E9AF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */; };
 		84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */; };
@@ -64,6 +65,7 @@
 		847483AA26BBC4B600B9366B /* UIColor + Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Presets.swift"; sourceTree = "<group>"; };
 		847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsTableCell.swift; sourceTree = "<group>"; };
 		847483B326BBCB7E00B9366B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		8484E4E826BCEFCB00715360 /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		8491EEB226BBD21600C61F18 /* BookTicketsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketsFooter.swift; sourceTree = "<group>"; };
 		84ADA4EA26BAC8F1007E9AF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeatViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +251,14 @@
 			path = CommonViews;
 			sourceTree = "<group>";
 		};
+		8484E4E726BCEFB400715360 /* UIViewController + Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8484E4E826BCEFCB00715360 /* UIViewController + Alert.swift */,
+			);
+			path = "UIViewController + Alert";
+			sourceTree = "<group>";
+		};
 		84ADA4F026BAD855007E9AF0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +283,7 @@
 		84ADA4FC26BAD9E6007E9AF0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8484E4E726BCEFB400715360 /* UIViewController + Alert */,
 				84E7708426BC26E200885220 /* Array */,
 				847483A926BBC4A600B9366B /* Color */,
 				8463CF7F26BBFE8B00D6EFCE /* CoreData */,
@@ -462,6 +473,7 @@
 				8416B34E26B6EBA000B0C50A /* AppCoordinator.swift in Sources */,
 				84ADA4EE26BAC9C7007E9AF0 /* BookSeatViewModel.swift in Sources */,
 				8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */,
+				8484E4E926BCEFCB00715360 /* UIViewController + Alert.swift in Sources */,
 				8416B34626B6EB6000B0C50A /* SeatTypes.swift in Sources */,
 				84ADA52126BAFF4D007E9AF0 /* HomeItemsModel.swift in Sources */,
 				8416B34526B6EB6000B0C50A /* Header.swift in Sources */,

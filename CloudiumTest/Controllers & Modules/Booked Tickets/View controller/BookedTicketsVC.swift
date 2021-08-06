@@ -79,6 +79,7 @@ extension BookedTicketsVC : UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .white
         let seat = viewModel.getSeatsAt(index: indexPath.section)[indexPath.row]
         cell.textLabel?.text = seat.seatId
+        cell.textLabel?.textColor = .black
         return cell
     }
 }

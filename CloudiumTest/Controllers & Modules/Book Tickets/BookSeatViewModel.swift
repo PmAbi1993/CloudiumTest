@@ -59,10 +59,11 @@ class BookSeatViewModel {
         print("Current Ticket Price: \(currentTicketPrice)")
     }
     
-    func saveSeatsInSelection() {
+    func saveSeatsInSelection(completion: () -> ()) {
         SavedSeats.saveSeats(with: selectedSeats,
                              name: userName,
                              ticketPrice: currentTicketPrice)
+        completion()
     }
     func getSeatStatus(at indexPath: IndexPath) -> SeatStatus {
         guard let section = SeatType(rawValue: indexPath.section) else {
