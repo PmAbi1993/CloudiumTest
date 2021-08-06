@@ -23,7 +23,7 @@ enum HomeDataError: Error {
             return "Incorrect Details"
         case .seatsNotAvailable:
             let viewModel: HomeVCViewModel = .init()
-            return "Sorry, Only \(viewModel.availableSeats()) seats available "
+            return "Sorry, Only \(viewModel.availableSeats() - 1) seats available "
         case .dbCleared:
             return "Database has been cleared"
         }

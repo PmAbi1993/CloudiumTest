@@ -26,10 +26,15 @@ class HomeVCViewModel {
             }
         }
         var totalSeatsAvailable: Int = 0
+        var hiddenSeats: Int = 0
+        var placeHolders: Int = 0
         SeatType.allCases.forEach({
             totalSeatsAvailable += $0.seatsInSection
+            print($0.seatsInSection / $0.rowsInSet)
+            hiddenSeats += $0.seatsInSection / $0.rowsInSet
+            placeHolders += $0.seatLabel.count
         })
-        let availableSeat: Int = totalSeatsAvailable - allBookedSeats
+        let availableSeat: Int = totalSeatsAvailable - (allBookedSeats + placeHolders + hiddenSeats)
         return availableSeat
     }
     

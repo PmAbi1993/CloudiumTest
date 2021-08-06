@@ -49,7 +49,6 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         
         self.title = "Book Seats"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-//        viewModel = .init(numberOfSeatsToSelect: 3)
         extendedLayoutIncludesOpaqueBars = true
 
         view.addSubview(collectionView)

@@ -21,7 +21,7 @@ enum SeatType: Int, CaseIterable {
     }
     var seatsInSection: Int {
         switch self {
-        case .recliner: return 7
+        case .recliner: return 8
         case .prime:  return 32
         case .classicPlus: return 70
         }
@@ -35,14 +35,14 @@ enum SeatType: Int, CaseIterable {
     }
     var rowsInSet: Int {
         switch self {
-        case .recliner: return 7
+        case .recliner: return 8
         case .prime: return 8
         case .classicPlus: return 10
         }
     }
     var rowToHide: Int {
         switch self {
-        case .recliner: return 3
+        case .recliner: return 4
         case .prime: return 4
         case .classicPlus: return 5
         }
