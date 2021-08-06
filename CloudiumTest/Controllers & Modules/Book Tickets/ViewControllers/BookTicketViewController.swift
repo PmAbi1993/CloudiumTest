@@ -82,7 +82,7 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         let price: Double = viewModel.currentTicketPrice
         if price > 0 {
             let profileButton = UIButton()
-            profileButton.frame = CGRect(x: 0, y: 30, width: 100, height: 30)
+            profileButton.frame = CGRect(x: 0, y: 30, width: 140, height: 30)
             profileButton.setTitle("Buy: \(price)", for: .normal)
             profileButton.backgroundColor = .accentColor
             profileButton.setTitleColor(.white, for: .normal)
