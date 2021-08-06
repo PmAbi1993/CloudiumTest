@@ -20,6 +20,7 @@
 		8416B34F26B6EBA000B0C50A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34B26B6EBA000B0C50A /* Coordinator.swift */; };
 		8416B35026B6EBA000B0C50A /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */; };
 		841FF13E26BB072400589CAD /* HomeVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FF13D26BB072400589CAD /* HomeVCViewModel.swift */; };
+		8455466F26BD4F8E00CFF5C4 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 8455466E26BD4F8E00CFF5C4 /* Readme.md */; };
 		847483A526BBC15300B9366B /* UIColor + Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483A426BBC15300B9366B /* UIColor + Create.swift */; };
 		847483AB26BBC4B600B9366B /* UIColor + Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AA26BBC4B600B9366B /* UIColor + Presets.swift */; };
 		847483B026BBC62000B9366B /* HomeItemsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */; };
@@ -72,6 +73,7 @@
 		8416B34B26B6EBA000B0C50A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8416B34D26B6EBA000B0C50A /* StoryBoarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		841FF13D26BB072400589CAD /* HomeVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewModel.swift; sourceTree = "<group>"; };
+		8455466E26BD4F8E00CFF5C4 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		847483A426BBC15300B9366B /* UIColor + Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Create.swift"; sourceTree = "<group>"; };
 		847483AA26BBC4B600B9366B /* UIColor + Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Presets.swift"; sourceTree = "<group>"; };
 		847483AF26BBC62000B9366B /* HomeItemsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemsTableCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		8416B30126B6E51900B0C50A = {
 			isa = PBXGroup;
 			children = (
+				8455466E26BD4F8E00CFF5C4 /* Readme.md */,
 				8416B30C26B6E51900B0C50A /* CloudiumTest */,
 				848A3A4B26BD166F000D0DAE /* CloudiumTestTests */,
 				8416B30B26B6E51900B0C50A /* Products */,
@@ -520,6 +523,7 @@
 			files = (
 				8416B31D26B6E51A00B0C50A /* LaunchScreen.storyboard in Resources */,
 				8416B31A26B6E51A00B0C50A /* Assets.xcassets in Resources */,
+				8455466F26BD4F8E00CFF5C4 /* Readme.md in Resources */,
 				8416B31526B6E51900B0C50A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
