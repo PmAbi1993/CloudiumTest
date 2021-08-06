@@ -124,9 +124,6 @@
 				847483A826BBC49600B9366B /* Assets */,
 				84ADA4FC26BAD9E6007E9AF0 /* Extensions */,
 				8484E4FB26BD106700715360 /* Miscellaneous */,
-				8416B31326B6E51900B0C50A /* Main.storyboard */,
-				8416B31926B6E51A00B0C50A /* Assets.xcassets */,
-				8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */,
 				8416B31E26B6E51A00B0C50A /* Info.plist */,
 			);
 			path = CloudiumTest;
@@ -186,6 +183,9 @@
 		847483A826BBC49600B9366B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8416B31326B6E51900B0C50A /* Main.storyboard */,
+				8416B31926B6E51A00B0C50A /* Assets.xcassets */,
+				8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
