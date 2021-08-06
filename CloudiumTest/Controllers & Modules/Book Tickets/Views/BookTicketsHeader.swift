@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Header: UICollectionReusableView {
+class BookTicketsHeader: UICollectionReusableView {
     
     var label: PaddingLabel = {
         

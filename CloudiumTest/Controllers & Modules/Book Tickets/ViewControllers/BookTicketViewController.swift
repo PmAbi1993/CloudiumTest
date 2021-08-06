@@ -25,9 +25,9 @@ class BookTicketViewController: UIViewController, StoryBoardInitiable {
         collectionView.delegate = self
         collectionView.register(CustomCell.self,
                                 forCellWithReuseIdentifier: String(describing: CustomCell.self))
-        collectionView.register(Header.self,
+        collectionView.register(BookTicketsHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: String(describing: Header.self))
+                                withReuseIdentifier: String(describing: BookTicketsHeader.self))
         collectionView.register(BookTicketsFooter.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                                 withReuseIdentifier: String(describing: BookTicketsFooter.self))
@@ -144,10 +144,10 @@ extension BookTicketViewController: UICollectionViewDelegate, UICollectionViewDa
      
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let header: Header = collectionView.dequeueReusableSupplementaryView(
+            guard let header: BookTicketsHeader = collectionView.dequeueReusableSupplementaryView(
                     ofKind: UICollectionView.elementKindSectionHeader,
-                    withReuseIdentifier: String(describing: Header.self),
-                    for: indexPath) as? Header else {
+                    withReuseIdentifier: String(describing: BookTicketsHeader.self),
+                    for: indexPath) as? BookTicketsHeader else {
                 fatalError()
             }
             header.configureHeader(seat: SeatType(rawValue: indexPath.section))
