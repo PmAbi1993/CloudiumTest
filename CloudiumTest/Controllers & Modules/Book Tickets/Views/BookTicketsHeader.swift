@@ -10,12 +10,11 @@ import UIKit
 class BookTicketsHeader: UICollectionReusableView {
     
     var label: PaddingLabel = {
-        
         let view: PaddingLabel = PaddingLabel(withInsets: 8, 8, 8, 8)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .white
         view.font = .boldSystemFont(ofSize: 17)
-//        view.layer.borderWidth = 1
+
         return view
     }()
     
@@ -27,7 +26,6 @@ class BookTicketsHeader: UICollectionReusableView {
         label.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
         label.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
         label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
-
 
     }
     

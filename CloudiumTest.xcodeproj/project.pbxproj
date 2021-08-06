@@ -121,31 +121,15 @@
 				8463CF7D26BBFE0C00D6EFCE /* AppDelegate */,
 				847483B226BBCB5800B9366B /* CommonViews */,
 				84ADA51D26BAFEF2007E9AF0 /* Controllers & Modules */,
-				8416B34126B6EB6000B0C50A /* Views */,
 				847483A826BBC49600B9366B /* Assets */,
 				84ADA4FC26BAD9E6007E9AF0 /* Extensions */,
+				8484E4FB26BD106700715360 /* Miscellaneous */,
 				8416B31326B6E51900B0C50A /* Main.storyboard */,
 				8416B31926B6E51A00B0C50A /* Assets.xcassets */,
 				8416B31B26B6E51A00B0C50A /* LaunchScreen.storyboard */,
 				8416B31E26B6E51A00B0C50A /* Info.plist */,
 			);
 			path = CloudiumTest;
-			sourceTree = "<group>";
-		};
-		8416B34126B6EB6000B0C50A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8416B34826B6EBA000B0C50A /* Helper */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		8416B34826B6EBA000B0C50A /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				8416B34C26B6EBA000B0C50A /* StoryBoard */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		8416B34926B6EBA000B0C50A /* Coordinators */ = {
@@ -288,6 +272,14 @@
 				84ADA4ED26BAC9C7007E9AF0 /* BookSeatViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8484E4FB26BD106700715360 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				8416B34C26B6EBA000B0C50A /* StoryBoard */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		84ADA4F026BAD855007E9AF0 /* CoreData */ = {
